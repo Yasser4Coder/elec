@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
+.Elec-circle {
+  animation: cir-left-right;
+  animation: cir-left-right 12s ease-in-out infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Elec-circle .line {
+  background: rgb(44, 145, 225);
+  background: linear-gradient(
+    93deg,
+    rgba(44, 145, 225, 0.30584733893557425) 20%,
+    rgba(44, 145, 225, 0.5551470588235294) 38%,
+    rgba(44, 145, 225, 1) 93%
+  );
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.linkes-hover:hover {
+  color: #2c91e1;
+}
+
+@keyframes cir-left-right {
+  0% {
+    left: -10%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    left: 98.5%; /* Adjust this value for the distance you want the circle to move */
   }
 }
