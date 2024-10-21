@@ -85,7 +85,7 @@ const OurTeam = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl text-[#2563EB] mb-4">
-            Meet Our Electrifying Team
+            Meet Our Elec Team
           </h2>
           <p className="text-xl text-[#4B5563] max-w-2xl mx-auto">
             The bright sparks behind our club's success!

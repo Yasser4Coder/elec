@@ -71,7 +71,7 @@ const Activities = () => {
       <div className="container px-4 md:px-6 relative z-10">
         <div className="text-center mb-12">
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
-            Electrifying Activities
+            Elec Activities
           </h1>
           <p className="text-xl text-[#A1A1AA] max-w-2xl mx-auto">
             Spark your curiosity with our high-voltage events!
