@@ -1,6 +1,7 @@
 import React from "react";
 import { Zap, ChevronRight } from "lucide-react";
 import BgAnimation from "./BgAnimation";
+import { Link } from "react-scroll";
 
 const HeroSection = () => {
   return (
@@ -21,9 +22,12 @@ const HeroSection = () => {
             Spark your passion for electronics and join the most electrifying
             club on campus!
           </p>
-          <button className=" py-[10px] px-[30px] flex items-center gap-[5px] rounded-xl bg-[#18aeed] text-black hover:bg-[#f2f2f2] hover:text-[#18aeed] transition-all duration-300 transform hover:scale-105">
+          <Link
+            to="join"
+            className=" py-[10px] cursor-pointer px-[30px] flex items-center gap-[5px] rounded-xl bg-[#18aeed] text-black hover:bg-[#f2f2f2] hover:text-[#18aeed] transition-all duration-300 transform hover:scale-105"
+          >
             Join Now <ChevronRight className="ml-2 h-4 w-4" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>
