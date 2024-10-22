@@ -21,10 +21,13 @@ const Header = () => {
       <div className="container mx-auto py-[10px]">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="logo cursor-pointer flex items-center gap-[10px]">
+          <Link
+            to="home"
+            className="logo cursor-pointer flex items-center gap-[10px]"
+          >
             <img src={logo} alt="logo" className="w-[50px] h-[60px]" />
             <h1 className="text-white text-2xl font-bold">Elec Club</h1>
-          </div>
+          </Link>
 
           {/* Links for Desktop */}
           <div className="links hidden md:flex items-center gap-[25px]">
@@ -60,7 +63,7 @@ const Header = () => {
             </Link>
             <Link
               to="join"
-              className="text-white bg-blue cursor-pointLink text-lg font-semibold py-[7px] px-[25px] bg-blue-500 rounded-xl hover:bg-blue-600 transition-all"
+              className="text-white cursor-pointer bg-blue cursor-pointLink text-lg font-semibold py-[7px] px-[25px] bg-blue-500 rounded-xl hover:bg-blue-600 transition-all"
             >
               Join
             </Link>
