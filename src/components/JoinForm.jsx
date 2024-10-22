@@ -1,4 +1,6 @@
 import React from "react";
+import "../firebase";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
 
 import { useState } from "react";
 import {
@@ -10,29 +12,52 @@ import {
 } from "lucide-react";
 
 const JoinForm = () => {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    year: "",
-    interests: "",
-  });
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [areasOfInterest, setAreasOfInterest] = useState("");
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const db = getFirestore();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formState);
-    // Here you would typically send the form data to your backend
-    alert("Thanks for your interest! We'll be in touch soon.");
-  };
+    setLoading(true);
+    setError("");
+    setMessage("");
 
-  const handleChange = (e) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value });
+    try {
+      await addDoc(collection(db, "users"), {
+        fullName: fullName,
+        email: email,
+        phoneNumber: phoneNumber,
+        areasOfInterest: areasOfInterest,
+      });
+      setLoading(false);
+      setMessage("Wellcom to Our Crew!");
+      setTimeout(() => {
+        setMessage(false);
+      }, 4000);
+    } catch (error) {
+      setError(error.message); // Display error message if sign-up fails
+      setTimeout(() => {
+        setError(false);
+      }, 4000);
+    }
   };
   return (
     <section
       id="join"
       className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-yellow-100 via-blue-100 to-green-100 overflow-hidden relative"
     >
+      {loading && (
+        <div className="center-loading-spinner flex items-center justify-center">
+          <div class="loader"></div>
+        </div>
+      )}
+
       {/* Animated circuit paths */}
       <div className="absolute inset-0 z-0">
         <svg
@@ -75,7 +100,7 @@ const JoinForm = () => {
           <div className="text-center text-xl font-bold mb-[20px]">
             Membership Application
           </div>
-          <form className=" flex flex-col gap-[15px]">
+          <form className=" flex flex-col gap-[15px]" onSubmit={handleSubmit}>
             <div className="flex flex-col gap-[15px]">
               <label
                 htmlFor="full-name"
@@ -84,9 +109,10 @@ const JoinForm = () => {
                 <UserIcon /> Full Name
               </label>
               <input
+                required
                 type="text"
                 id="full-name"
-                onChange={handleChange}
+                onChange={(e) => setFullName(e.target.value)}
                 className="h-[40px] border-[1px] border-blue rounded-lg px-[15px]"
               />
             </div>
@@ -99,9 +125,10 @@ const JoinForm = () => {
                 Email
               </label>
               <input
+                required
                 type="text"
                 id="email"
-                onChange={handleChange}
+                onChange={(e) => setEmail(e.target.value)}
                 className="h-[40px] border-[1px] border-blue rounded-lg px-[15px]"
               />
             </div>
@@ -114,9 +141,10 @@ const JoinForm = () => {
                 Phone Number
               </label>
               <input
+                required
                 type="number"
                 id="phone"
-                onChange={handleChange}
+                onChange={(e) => setPhoneNumber(e.target.value)}
                 className="h-[40px] border-[1px] border-blue rounded-lg px-[15px]"
               />
             </div>
@@ -129,8 +157,9 @@ const JoinForm = () => {
                 Areas of Interest
               </label>
               <textarea
+                required
                 id="interest"
-                onChange={handleChange}
+                onChange={(e) => setAreasOfInterest(e.target.value)}
                 className="h-[120px] border-[1px] border-blue rounded-lg px-[15px] py-[5px]"
               ></textarea>
             </div>
@@ -138,6 +167,22 @@ const JoinForm = () => {
               <ZapIcon />
               Power Up My Membership!
             </button>
+            {message && (
+              <div className="text-[#008000] w-full flex items-center justify-center">
+                {message}
+              </div>
+            )}
+            {error && (
+              <div
+                className="text-[#FF0000]"
+                w-full
+                flex
+                items-center
+                justify-center
+              >
+                {error}
+              </div>
+            )}
           </form>
         </div>
       </div>
