@@ -70,3 +70,35 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.mySwiper {
+  min-width: 360px;
+  max-width: 360px;
+  min-height: 360px;
+  max-height: 360px;
+  border-radius: 0.75rem;
+  border: 2px solid #18aeed;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card:hover {
+  box-shadow: #18aded47 0px 10px 36px 0px, #18aded47 0px 0px 0px 1px;
+}
+
+.line-center {
+  top: 55%;
+  left: 90.7%;
+  transform: translate(-50%, -50%);
+}
+
+.in-view {
+  transform: scale(2.5);
+}

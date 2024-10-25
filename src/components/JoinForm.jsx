@@ -36,7 +36,8 @@ const JoinForm = () => {
         areasOfInterest: areasOfInterest,
       });
       setLoading(false);
-      setMessage("Wellcom to Our Crew!");
+      setMessage("Welcome to Our Crew!");
+
       setTimeout(() => {
         setMessage(false);
       }, 4000);
@@ -47,6 +48,7 @@ const JoinForm = () => {
       }, 4000);
     }
   };
+
   return (
     <section
       id="join"

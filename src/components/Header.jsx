@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../images/photo_2024-10-19_19-19-49.jpg";
+import logo from "../images/photo_2024-10-19_19-19-49-removebg-preview.png";
 import setting from "../images/setting.png";
 import { Link } from "react-scroll";
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-black fixed border-b-[1px] border-Charcoal w-full z-50 overflow-hidden">
+    <div className="fixed border-b-[1px] bg-[#111827] border-[#18adedaf] w-full z-50 overflow-hidden">
       {/* Circle Animation */}
       <div className="Elec-circle absolute z-50 bottom-[-6px] flex items-center">
         <div className="h-[3px] line w-[80px]  bg-blue"></div>
@@ -26,11 +26,11 @@ const Header = () => {
             className="logo cursor-pointer flex items-center gap-[10px]"
           >
             <img src={logo} alt="logo" className="w-[50px] h-[60px]" />
-            <h1 className="text-white text-2xl font-bold">Elec Club</h1>
+            <h1 className="text-white DtFont text-2xl font-bold">ELEC CLUB</h1>
           </Link>
 
           {/* Links for Desktop */}
-          <div className="links hidden md:flex items-center gap-[25px]">
+          <div className="links hidden md:flex items-center gap-[40px]">
             <Link
               to="home"
               className="text-white text-lg linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
@@ -61,13 +61,13 @@ const Header = () => {
             >
               Members
             </Link>
-            <Link
-              to="join"
-              className="text-white cursor-pointer bg-blue cursor-pointLink text-lg font-semibold py-[7px] px-[25px] bg-blue-500 rounded-xl hover:bg-blue-600 transition-all"
-            >
-              Join
-            </Link>
           </div>
+          <Link
+            to="join"
+            className="text-white cursor-pointer bg-blue cursor-pointLink text-lg font-semibold py-[7px] px-[25px] bg-blue-500 rounded-xl hover:bg-blue-600 transition-all"
+          >
+            Join
+          </Link>
 
           {/* Settings Icon for Mobile */}
           <div className="md:hidden">

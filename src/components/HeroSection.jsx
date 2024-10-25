@@ -15,12 +15,12 @@ const HeroSection = () => {
             <BgAnimation />
           </div>
           <Zap className="w-24 h-24 text-[#18aeed] animate-pulse mb-8 mx-auto" />
-          <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
-            Elec Club
+          <h1 className="text-5xl DtFont sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
+            ELEC CLUB
           </h1>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
-            Spark your passion for electronics and join the most electrifying
-            club on campus!
+            Spark your passion for electronics, join the best place to grow your
+            knowledge!
           </p>
           <Link
             to="join"

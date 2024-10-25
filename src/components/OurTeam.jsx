@@ -1,31 +1,43 @@
 import { ZapIcon, UserIcon, BoltIcon } from "lucide-react";
 import yasser from "../images/2--.jpg";
-
+import TahaLaib from "../images/4----.jpg";
+import yazid from "../images/3 ))).jpg";
+import Lina from "../images/IMG_9282.jpg";
+import Mohamed from "../images/1 .jpg";
+import taha from "../images/taha.jpg";
+import khalil from "../images/khalil.jpg";
+import chourouk from "../images/chourouk.jpg";
+import issra from "../images/issra.jpg";
 const members = [
   {
     name: "Taha Rouabhi",
     role: "President",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: taha,
   },
   {
     name: "Khalil Benchebha",
     role: "Vice President HR team manager",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: khalil,
   },
   {
     name: "Taha Laib",
     role: "Vice President ER team manager",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: TahaLaib,
   },
   {
-    name: "Chourouk Mihoubi",
-    role: "General Secretary",
-    avatar: "/placeholder.svg?height=100&width=100",
+    name: "Mohamed Lazili",
+    role: "Elec Lab Manager",
+    avatar: Mohamed,
   },
   {
     name: "Yazid Bekkai",
     role: "Dev Team Manager Mobile developer",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: yazid,
+  },
+  {
+    name: "Chourouk Mihoubi",
+    role: "General Secretary",
+    avatar: chourouk,
   },
   {
     name: "Yasser Benseghier",
@@ -35,15 +47,21 @@ const members = [
   {
     name: "Lina Abderrahim",
     role: "Media Team Manager",
-    avatar: "",
+    avatar: Lina,
   },
-  {
-    name: "Mohamed Lazili",
-    role: "Elec Lab Manager",
-    avatar: "",
-  },
+
   {
     name: "Israa Benaros",
+    role: "Finance Team Manager",
+    avatar: issra,
+  },
+  {
+    name: "chaba",
+    role: "Finance Team Manager",
+    avatar: "",
+  },
+  {
+    name: "",
     role: "Finance Team Manager",
     avatar: "",
   },

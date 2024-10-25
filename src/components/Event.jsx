@@ -1,5 +1,26 @@
 import React, { useState, useEffect } from "react";
-import { CalendarIcon, ZapIcon } from "lucide-react";
+
+import project0 from "../images/PROJECT-0.png";
+import co from "../images/CO.png";
+import startUpCity from "../images/startup0.png";
+import des from "../images/des.png";
+import elec from "../images/photo_2024-10-19_19-19-49-removebg-preview.png";
+
+import co1 from "../images/co-scape/f15.png";
+import co2 from "../images/co-scape/f16.png";
+import co3 from "../images/co-scape/f17.png";
+import co4 from "../images/co-scape/f18.png";
+import co5 from "../images/co-scape/f19.png";
+import co6 from "../images/co-scape/f20.png";
+
+// Import Swiper styles
+
+import { CalendarIcon } from "lucide-react";
+
+import amroun from "../images/photo_2024-10-22_23-48-27.jpg";
+import EventCard from "./EventCard";
+
+const coImages = [co1, co2, co3, co4, co5, co6];
 
 const Event = () => {
   const [days, setDays] = useState(0);
@@ -47,7 +68,7 @@ const Event = () => {
           <path
             d="M0,0 L100,0 100,100 0,100 Z"
             fill="none"
-            stroke="currentColor"
+            stroke="#18aeed"
             strokeWidth="0.5"
           >
             <animate
@@ -83,7 +104,7 @@ const Event = () => {
                 { label: "Seconds", value: seconds },
               ].map((item) => (
                 <div key={item.label} className="flex flex-col items-center">
-                  <span className="text-3xl font-bold text-[#3B82F6]">
+                  <span className="text-3xl font-bold text-[#18aeed]">
                     {item.value}
                   </span>
                   <span className="text-sm text-[#71717A]">{item.label}</span>
@@ -92,30 +113,81 @@ const Event = () => {
             </div>
           </div>
 
-          <div className="w-full max-w-md perspective-1000">
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#9333EA] to-[#3B82F6] rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative px-7 py-6 bg-[#1F2937] ring-1 ring-[#0F172A] rounded-lg leading-none flex items-top justify-start space-x-6 transform transition duration-500 hover:scale-105 hover:rotate-1">
-                <ZapIcon className="w-8 h-8 text-[#9333EA]" />
-                <div className="space-y-2">
-                  <p className="text-[#F1F5F9] font-semibold">
-                    Circuit Design Workshop
-                  </p>
-                  <p className="text-[#CBD5E1] text-sm">
-                    Learn the fundamentals of circuit design
-                  </p>
-                  <div className="flex items-center text-[#94B8A3] text-xs">
-                    <CalendarIcon className="w-4 h-4 mr-1" />
-                    <span>Saturday, November 15, 2023 | 2:00 PM - 5:00 PM</span>
+          <div className=" container mx-auto">
+            <div className="w-full perspective-1000">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#3B82F6] to-[#3B82F6] rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                <div className="relative px-7 py-6 bg-[#1F2937] ring-1 ring-[#0F172A] rounded-lg leading-none flex gap-[90px] items-top justify-start space-x-6 transform transition duration-500 hover:scale-105 hover:rotate-1">
+                  <div className=" min-w-[420px] max-w-[420px] border-blue rounded-xl min-h-[420px] max-h-[420px] border-[2px]">
+                    <img
+                      src={amroun}
+                      className="w-full h-full object-cover rounded-xl"
+                      alt=""
+                    />
                   </div>
-                  <p className="text-[#CBD5E1] text-sm">
-                    <strong>Location:</strong> Engineering Building, Room 301
-                  </p>
-                  <button className="w-full py-[15px] rounded-lg bg-[#1E88E5] hover:bg-[#1976D2] text-white transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg">
-                    Register Now
-                  </button>
+
+                  <div className="space-y-2 flex flex-col gap-[32px]">
+                    <p className="text-[#F1F5F9] text-3xl font-semibold">
+                      البحر الشاسع لدخول عالم البرمجة من بابها الواسع
+                    </p>
+                    <div className=" flex flex-col gap-[8px]">
+                      <p className="text-[#CBD5E1] text-lg h-[180px]">
+                        دورة "البحر الشاسع لدخول عالم البرمجة من بابها الواسع"،
+                        من إعداد الأستاذ عمرون حسام الدين، هي بوابة شاملة
+                        ومتكاملة لتمكينك من استكشاف عالم البرمجة بكل تفاصيله.
+                        صُممت هذه الدورة لتبسط المفاهيم الأساسية وتعتمد منهجية
+                        تدريبية تتدرج من الأساسيات إلى التطبيقات العملية. ستحصل
+                        من خلالها على فهم قوي للغات البرمجة الحديثة، هيكليات
+                        البرمجة، وأساسيات تطوير التطبيقات البرمجية.
+                      </p>
+                      <div className="flex flex-col gap-[4px]">
+                        <div className="flex items-center text-[#94B8A3] text-xl">
+                          <CalendarIcon className="w-4 h-4 mr-1" />
+                          <span>
+                            Saturday, November 15, 2023 | 2:00 PM - 5:00 PM
+                          </span>
+                        </div>
+                        <p className="text-[#CBD5E1] text-lg">
+                          <strong>Location:</strong> Engineering Building, Room
+                          301
+                        </p>
+                      </div>
+                    </div>
+                    <button className="w-full py-[15px] rounded-lg bg-[#1E88E5] hover:bg-[#1976D2] text-white transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg">
+                      Register Now
+                    </button>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className=" relative pt-[120px]">
+            <div className=" absolute line-center h-[77%] z-[-1] w-[3px] bg-[#18aeed]"></div>
+            <div>
+              <h1 className="text-5xl text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
+                Previus Elec Events
+              </h1>
+            </div>
+            <div className="flex mt-[80px] flex-col gap-[120px]">
+              <EventCard
+                title={"Project-0"}
+                desc={
+                  "دورة البحر الشاسع لدخول عالم البرمجة من بابها الواسعمن إعداد الأستاذ عمرون حسام الدين، هي بوابة شاملة ومتكاملة لتمكينك من استكشاف عالم البرمجة بكل تفاصيل صُممت هذه الدورة لتبسط المفاهيم الأساسية وتعتمد منهجية تدريبية تتدرج من الأساسيات إلى التطبيقات العملية. ستحصل من خلالها على فهم قوي للغات البرمجة الحديثة، هيكليات البرمجة، وأساسيات تطوير التطبيقات البرمجية."
+                }
+                date={""}
+                image={project0}
+              />
+              <EventCard
+                title={"CO-Scape"}
+                images={coImages}
+                desc={
+                  "دورة البحر الشاسع لدخول عالم البرمجة من بابها الواسعمن إعداد الأستاذ عمرون حسام الدين، هي بوابة شاملة ومتكاملة لتمكينك من استكشاف عالم البرمجة بكل تفاصيل صُممت هذه الدورة لتبسط المفاهيم الأساسية وتعتمد منهجية تدريبية تتدرج من الأساسيات إلى التطبيقات العملية. ستحصل من خلالها على فهم قوي للغات البرمجة الحديثة، هيكليات البرمجة، وأساسيات تطوير التطبيقات البرمجية."
+                }
+                image={co}
+              />
+              <EventCard image={startUpCity} />
+              <EventCard image={des} />
+              <EventCard image={elec} />
             </div>
           </div>
         </div>
