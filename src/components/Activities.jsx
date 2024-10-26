@@ -38,7 +38,7 @@ const Activities = () => {
   return (
     <section
       id="activities"
-      className="w-full py-12 md:py-24 lg:py-32 bg-[#111827] overflow-hidden relative"
+      className="w-full py-12 flex justify-center md:py-24 lg:py-32 bg-[#111827] overflow-hidden relative"
     >
       {/* Animated circuit board background */}
       <div className="absolute inset-0 z-0 opacity-20">

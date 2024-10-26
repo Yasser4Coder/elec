@@ -102,3 +102,18 @@
 .in-view {
   transform: scale(2.5);
 }
+
+@media only screen and (max-width: 423px) {
+  .event-card-p {
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 431px) {
+  .event-card-event {
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 300px;
+    min-height: 300px;
+  }
+}

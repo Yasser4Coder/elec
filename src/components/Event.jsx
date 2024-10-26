@@ -13,6 +13,30 @@ import co4 from "../images/co-scape/f18.png";
 import co5 from "../images/co-scape/f19.png";
 import co6 from "../images/co-scape/f20.png";
 
+import p1 from "../images/p0/01.png";
+import p2 from "../images/p0/01.png";
+import p3 from "../images/p0/02.png";
+import p4 from "../images/p0/07.png";
+import p5 from "../images/p0/10.png";
+
+import s1 from "../images/startupcity/1.jpg";
+import s2 from "../images/startupcity/2.jpg";
+import s3 from "../images/startupcity/3.jpg";
+import s4 from "../images/startupcity/4.jpg";
+import s5 from "../images/startupcity/5.jpg";
+
+import d1 from "../images/designersDay/1.jpg";
+import d2 from "../images/designersDay/2.jpg";
+import d3 from "../images/designersDay/3.jpg";
+import d4 from "../images/designersDay/4.jpg";
+import d5 from "../images/designersDay/5.jpg";
+import d6 from "../images/designersDay/6.jpg";
+
+import w1 from "../images/workshops/1.png";
+import w2 from "../images/workshops/2.png";
+import w3 from "../images/workshops/3.jpg";
+import w4 from "../images/workshops/4.jpg";
+import w5 from "../images/workshops/5.jpg";
 // Import Swiper styles
 
 import { CalendarIcon } from "lucide-react";
@@ -21,6 +45,10 @@ import amroun from "../images/photo_2024-10-22_23-48-27.jpg";
 import EventCard from "./EventCard";
 
 const coImages = [co1, co2, co3, co4, co5, co6];
+const poImages = [p1, p2, p3, p4, p5];
+const startUpImages = [s1, s2, s3, s4, s5];
+const designersDay = [d1, d2, d3, d4, d5, d6];
+const workshops = [w1, w3, w4, w2, w5];
 
 const Event = () => {
   const [days, setDays] = useState(0);
@@ -56,7 +84,7 @@ const Event = () => {
   return (
     <section
       id="event"
-      className="w-full py-12 md:py-24 lg:py-32 bg-[#111827] overflow-hidden relative"
+      className="w-full flex justify-center py-12 md:py-24 lg:py-32 bg-[#111827] overflow-hidden relative"
     >
       {/* Animated circuit background */}
       <div className="absolute inset-0 z-0 opacity-10">
@@ -117,8 +145,8 @@ const Event = () => {
             <div className="w-full perspective-1000">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#3B82F6] to-[#3B82F6] rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                <div className="relative px-7 py-6 bg-[#1F2937] ring-1 ring-[#0F172A] rounded-lg leading-none flex gap-[90px] items-top justify-start space-x-6 transform transition duration-500 hover:scale-105 hover:rotate-1">
-                  <div className=" min-w-[420px] max-w-[420px] border-blue rounded-xl min-h-[420px] max-h-[420px] border-[2px]">
+                <div className="relative px-7 py-6 bg-[#1F2937] ring-1 ring-[#0F172A] rounded-lg leading-none flex items-center flex-col lg:flex-row gap-[60px] xl:gap-[90px] items-top justify-start space-x-6 transform transition duration-500 hover:scale-105 hover:rotate-1">
+                  <div className="event-card-event min-w-[360px] min-h-[360px] overflow-hidden max-w-[360px] max-h-[360px] xl:min-w-[420px] xl:max-w-[420px] xl:min-h-[420px] xl:max-h-[420px] border-blue rounded-xl border-[2px]">
                     <img
                       src={amroun}
                       className="w-full h-full object-cover rounded-xl"
@@ -126,12 +154,12 @@ const Event = () => {
                     />
                   </div>
 
-                  <div className="space-y-2 flex flex-col gap-[32px]">
-                    <p className="text-[#F1F5F9] text-3xl font-semibold">
+                  <div className="space-y-2 flex flex-col gap-[18px] xl:gap-[32px]">
+                    <p className="text-[#F1F5F9] text-2xl xl:text-3xl font-semibold">
                       البحر الشاسع لدخول عالم البرمجة من بابها الواسع
                     </p>
                     <div className=" flex flex-col gap-[8px]">
-                      <p className="text-[#CBD5E1] text-lg h-[180px]">
+                      <p className="text-[#CBD5E1] event-card-p text-sm xl:text-lg sm:h-[100px] lg:h-[152px] xl:h-[190px] 2xl:h-[150px]">
                         دورة "البحر الشاسع لدخول عالم البرمجة من بابها الواسع"،
                         من إعداد الأستاذ عمرون حسام الدين، هي بوابة شاملة
                         ومتكاملة لتمكينك من استكشاف عالم البرمجة بكل تفاصيله.
@@ -141,13 +169,13 @@ const Event = () => {
                         البرمجة، وأساسيات تطوير التطبيقات البرمجية.
                       </p>
                       <div className="flex flex-col gap-[4px]">
-                        <div className="flex items-center text-[#94B8A3] text-xl">
+                        <div className="flex items-center text-[#94B8A3] text-lg xl:text-xl">
                           <CalendarIcon className="w-4 h-4 mr-1" />
                           <span>
                             Saturday, November 15, 2023 | 2:00 PM - 5:00 PM
                           </span>
                         </div>
-                        <p className="text-[#CBD5E1] text-lg">
+                        <p className="text-[#CBD5E1] text-md xl:text-lg">
                           <strong>Location:</strong> Engineering Building, Room
                           301
                         </p>
@@ -176,6 +204,7 @@ const Event = () => {
                 }
                 date={""}
                 image={project0}
+                images={poImages}
               />
               <EventCard
                 title={"CO-Scape"}
@@ -185,9 +214,9 @@ const Event = () => {
                 }
                 image={co}
               />
-              <EventCard image={startUpCity} />
-              <EventCard image={des} />
-              <EventCard image={elec} />
+              <EventCard image={startUpCity} images={startUpImages} />
+              <EventCard image={des} images={designersDay} />
+              <EventCard image={elec} images={workshops} />
             </div>
           </div>
         </div>

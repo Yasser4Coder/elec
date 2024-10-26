@@ -52,7 +52,7 @@ const JoinForm = () => {
   return (
     <section
       id="join"
-      className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-yellow-100 via-blue-100 to-green-100 overflow-hidden relative"
+      className="w-full flex justify-center py-12 md:py-24 lg:py-32 bg-gradient-to-br from-yellow-100 via-blue-100 to-green-100 overflow-hidden relative"
     >
       {loading && (
         <div className="center-loading-spinner flex items-center justify-center">

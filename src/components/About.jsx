@@ -8,8 +8,8 @@ import { ImBooks } from "react-icons/im";
 
 const About = () => {
   return (
-    <section id="about">
-      <div className=" container mx-auto flex items-center justify-center h-screen">
+    <section id="about" className="min-h-screen">
+      <div className=" container mx-auto flex items-center justify-center">
         <div className="flex gap-[20px] items-center flex-col">
           <h2 className="text-4xl DtFont mt-[40px] font-extrabold tracking-tighter sm:text-5xl md:text-6xl text-[#18aeed] mb-4">
             ABOUT ELEC CLUB

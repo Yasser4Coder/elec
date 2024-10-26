@@ -30,7 +30,7 @@ const Header = () => {
           </Link>
 
           {/* Links for Desktop */}
-          <div className="links hidden md:flex items-center gap-[40px]">
+          <div className="links hidden md:flex items-center gap-[20px] lg:gap-[40px]">
             <Link
               to="home"
               className="text-white text-lg linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
@@ -64,7 +64,7 @@ const Header = () => {
           </div>
           <Link
             to="join"
-            className="text-white cursor-pointer bg-blue cursor-pointLink text-lg font-semibold py-[7px] px-[25px] bg-blue-500 rounded-xl hover:bg-blue-600 transition-all"
+            className="text-white hidden md:flex cursor-pointer bg-blue cursor-pointLink text-lg font-semibold py-[7px] px-[25px] bg-blue-500 rounded-xl hover:bg-blue-600 transition-all"
           >
             Join
           </Link>
