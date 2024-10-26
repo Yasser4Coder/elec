@@ -1,5 +1,5 @@
 import React from "react";
-import { Lightbulb, Cpu } from "lucide-react";
+import { Cpu } from "lucide-react";
 import { FaBrain } from "react-icons/fa";
 import { SiCyberdefenders } from "react-icons/si";
 import { FaCode } from "react-icons/fa";
@@ -8,7 +8,10 @@ import { ImBooks } from "react-icons/im";
 
 const About = () => {
   return (
-    <section id="about" className="min-h-screen">
+    <section
+      id="about"
+      className="min-h-screen flex items-center justify-center"
+    >
       <div className=" container mx-auto flex items-center justify-center">
         <div className="flex gap-[20px] items-center flex-col">
           <h2 className="text-4xl DtFont mt-[40px] font-extrabold tracking-tighter sm:text-5xl md:text-6xl text-[#18aeed] mb-4">

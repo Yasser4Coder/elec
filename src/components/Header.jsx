@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../images/photo_2024-10-19_19-19-49-removebg-preview.png";
+import ElecClub from "../images/elecClub.png";
 import setting from "../images/setting.png";
 import { Link } from "react-scroll";
 const Header = () => {
@@ -26,7 +27,7 @@ const Header = () => {
             className="logo cursor-pointer flex items-center gap-[10px]"
           >
             <img src={logo} alt="logo" className="w-[50px] h-[60px]" />
-            <h1 className="text-white DtFont text-2xl font-bold">ELEC CLUB</h1>
+            <img src={ElecClub} alt="" />
           </Link>
 
           {/* Links for Desktop */}
@@ -62,12 +63,14 @@ const Header = () => {
               Members
             </Link>
           </div>
-          <Link
-            to="join"
-            className="text-white hidden md:flex cursor-pointer bg-blue cursor-pointLink text-lg font-semibold py-[7px] px-[25px] bg-blue-500 rounded-xl hover:bg-blue-600 transition-all"
-          >
-            Join
-          </Link>
+          <div className="hidden md:flex items-center gap-[20px]">
+            <Link
+              to="join"
+              className=" py-[10px] cursor-pointer px-[30px] flex items-center gap-[5px] rounded-xl bg-[#18aeed] border-[#18aeed] text-white border-[2px] font-semibold hover:bg-[#18aeed] hover:text-white transition-all duration-300 transform hover:scale-105"
+            >
+              Join
+            </Link>
+          </div>
 
           {/* Settings Icon for Mobile */}
           <div className="md:hidden">

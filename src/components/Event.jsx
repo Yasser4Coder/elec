@@ -199,24 +199,47 @@ const Event = () => {
             <div className="flex mt-[80px] flex-col gap-[120px]">
               <EventCard
                 title={"Project-0"}
+                location={"MBU - M'sila"}
                 desc={
-                  "دورة البحر الشاسع لدخول عالم البرمجة من بابها الواسعمن إعداد الأستاذ عمرون حسام الدين، هي بوابة شاملة ومتكاملة لتمكينك من استكشاف عالم البرمجة بكل تفاصيل صُممت هذه الدورة لتبسط المفاهيم الأساسية وتعتمد منهجية تدريبية تتدرج من الأساسيات إلى التطبيقات العملية. ستحصل من خلالها على فهم قوي للغات البرمجة الحديثة، هيكليات البرمجة، وأساسيات تطوير التطبيقات البرمجية."
+                  "The ultimate test of skills and teamwork. Project 0 challenged participants with AI, design, and cybersecurity tasks that grew in complexity in every  wave ,pushing teams to innovate and collaborate under pressure. An intense yet rewarding experience crafted for those ready to step up their game."
                 }
-                date={""}
+                date={"April, 25, 2024"}
                 image={project0}
                 images={poImages}
               />
               <EventCard
                 title={"CO-Scape"}
                 images={coImages}
+                date={"February 15, 2024"}
+                location={"ENSTI - Annaba"}
                 desc={
-                  "دورة البحر الشاسع لدخول عالم البرمجة من بابها الواسعمن إعداد الأستاذ عمرون حسام الدين، هي بوابة شاملة ومتكاملة لتمكينك من استكشاف عالم البرمجة بكل تفاصيل صُممت هذه الدورة لتبسط المفاهيم الأساسية وتعتمد منهجية تدريبية تتدرج من الأساسيات إلى التطبيقات العملية. ستحصل من خلالها على فهم قوي للغات البرمجة الحديثة، هيكليات البرمجة، وأساسيات تطوير التطبيقات البرمجية."
+                  "Organized by: Elec Msila, Alpha ESI, and Zenith Annaba An adventurous, crime-themed event blending the thrill of discovery with real-world challenges in cybersecurity, artificial intelligence, marketing, and UI/UX design... Participants navigated various thematic rooms, solving complex puzzles and technical challenges designed to push boundaries and foster creativity."
                 }
                 image={co}
               />
-              <EventCard image={startUpCity} images={startUpImages} />
-              <EventCard image={des} images={designersDay} />
-              <EventCard image={elec} images={workshops} />
+              <EventCard
+                title={"Startup City Hackathon"}
+                date={"July 7, 2023"}
+                location={"MBU - M'sila"}
+                desc={
+                  "Organized by: Elec Club & Inc Club, A high-energy 58-hour hackathon where 8 teams competed to bring innovative startup ideas to life. This evennt was organised to challenge the participant  problem-solving skills, and promote collaboration in a perfect creative environment."
+                }
+                image={startUpCity}
+                images={startUpImages}
+              />
+              <EventCard
+                title={"Designer's Day"}
+                date={"February, 16, 2023"}
+                location={"MBU - M'sila"}
+                image={des}
+                images={designersDay}
+              />
+              <EventCard
+                title={"Elec Work Shops"}
+                location={"MBU - M'sila & Online"}
+                image={elec}
+                images={workshops}
+              />
             </div>
           </div>
         </div>
