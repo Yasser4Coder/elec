@@ -190,7 +190,7 @@ const Event = () => {
             </div>
           </div>
           <div className=" relative pt-[120px]">
-            <div className=" absolute line-center h-[77%] z-[-1] w-[3px] bg-[#18aeed]"></div>
+            <div className=" absolute line-center h-[90%] sm:h-[77%] z-[-1] w-[3px] bg-[#18aeed]"></div>
             <div>
               <h1 className="text-5xl text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
                 Previus Elec Events
