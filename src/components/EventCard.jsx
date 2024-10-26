@@ -30,7 +30,7 @@ const EventCard = ({ title, desc, date, location, image, images }) => {
   }, []);
   return (
     <div className=" container mx-auto flex flex-col-reverse gap-[130px] sm:gap-[0px] sm:flex-row items-center justify-between">
-      <div className="w-[70%] perspective-1000 relative">
+      <div className="w-[85%] sm:w-[70%] perspective-1000 relative">
         <div className="line  hidden sm:block absolute h-[3px] w-[303px] bg-[#18aeed] right-[-33.9%] top-[50%]"></div>
         <div className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-[#3B82F6] to-[#3B82F6] rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
@@ -69,7 +69,7 @@ const EventCard = ({ title, desc, date, location, image, images }) => {
               }}
               navigation={true}
               modules={[Autoplay, Pagination, Navigation]}
-              className="mySwiper max-w-[180px] max-h-[180px] sm:max-w-[300px] sm:max-h-[300px] sm:min-w-[300px] sm:min-h-[300px]  xl:max-w-[360px] xl:max-h-[360px] xl:min-w-[360px] xl:min-h-[360px]"
+              className="mySwiper max-w-[300px] max-h-[300px] min-w-[300px] min-h-[300px] sm:max-w-[300px] sm:max-h-[300px] sm:min-w-[300px] sm:min-h-[300px]  xl:max-w-[360px] xl:max-h-[360px] xl:min-w-[360px] xl:min-h-[360px]"
             >
               {images?.map((image, index) => (
                 <SwiperSlide
