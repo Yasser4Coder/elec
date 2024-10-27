@@ -26,8 +26,8 @@ const Header = () => {
             to="home"
             className="logo cursor-pointer flex items-center gap-[10px]"
           >
-            <img src={logo} alt="logo" className="w-[50px] h-[60px]" />
-            <img src={ElecClub} alt="" />
+            <img src={logo} alt="logo" width={40} />
+            <img src={ElecClub} alt="" width={60} />
           </Link>
 
           {/* Links for Desktop */}
