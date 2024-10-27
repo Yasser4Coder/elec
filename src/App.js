@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import JoinForm from "./components/JoinForm";
 import OurTeam from "./components/OurTeam";
-import Test from "./components/Test";
 
 function App() {
   return (
@@ -19,7 +18,7 @@ function App() {
       <OurTeam />
       <Activities />
       <JoinForm />
-      <Test />
+      {/* <Test /> */}
       <Footer />
     </div>
   );

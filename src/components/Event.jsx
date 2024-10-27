@@ -84,7 +84,7 @@ const Event = () => {
   return (
     <section
       id="event"
-      className="w-full flex justify-center py-12 md:py-24 lg:py-32 bg-[#111827] overflow-hidden relative"
+      className="flex justify-center py-12 md:py-24 lg:py-32 bg-[#111827] overflow-hidden relative"
     >
       {/* Animated circuit background */}
       <div className="absolute inset-0 z-0 opacity-10">

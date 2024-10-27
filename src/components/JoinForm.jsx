@@ -1,26 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "../firebase";
 import { getFirestore, addDoc, collection } from "firebase/firestore";
-
-import { useState } from "react";
-import {
-  ZapIcon,
-  UserIcon,
-  MailIcon,
-  PhoneIcon,
-  RocketIcon,
-} from "lucide-react";
+import { ZapIcon } from "lucide-react";
 
 const JoinForm = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [areasOfInterest, setAreasOfInterest] = useState("");
+  const [faculty, setFaculty] = useState("");
+  const [skilles, setSkilles] = useState("");
+  const [areasOfInterest, setAreasOfInterest] = useState([]);
+  const [WhyUS, setWhyUS] = useState("");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
   const db = getFirestore();
+
+  const handleCheckboxChange = (event) => {
+    const value = event.target.value;
+    setAreasOfInterest((prev) => {
+      if (prev.includes(value)) {
+        return prev.filter((interest) => interest !== value); // Remove if already selected
+      } else if (prev.length < 2) {
+        return [...prev, value]; // Add if less than 2 selected
+      } else {
+        return prev; // Keep as is if 2 are already selected
+      }
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,12 +36,21 @@ const JoinForm = () => {
     setError("");
     setMessage("");
 
+    if (areasOfInterest.length !== 2) {
+      setError("Please select exactly two areas of interest.");
+      setLoading(false);
+      return;
+    }
+
     try {
       await addDoc(collection(db, "users"), {
         fullName: fullName,
         email: email,
         phoneNumber: phoneNumber,
         areasOfInterest: areasOfInterest,
+        skills: skilles,
+        WhyUS: WhyUS,
+        Faculty: faculty,
       });
       setLoading(false);
       setMessage("Welcome to Our Crew!");
@@ -42,7 +59,7 @@ const JoinForm = () => {
         setMessage(false);
       }, 4000);
     } catch (error) {
-      setError(error.message); // Display error message if sign-up fails
+      setError(error.message);
       setTimeout(() => {
         setError(false);
       }, 4000);
@@ -56,7 +73,7 @@ const JoinForm = () => {
     >
       {loading && (
         <div className="center-loading-spinner flex items-center justify-center">
-          <div class="loader"></div>
+          <div className="loader"></div>
         </div>
       )}
 
@@ -77,11 +94,7 @@ const JoinForm = () => {
               attributeName="d"
               dur="10s"
               repeatCount="indefinite"
-              values="
-              M0,50 Q25,25 50,50 T100,50;
-              M0,50 Q25,75 50,50 T100,50;
-              M0,50 Q25,25 50,50 T100,50
-            "
+              values="M0,50 Q25,25 50,50 T100,50; M0,50 Q25,75 50,50 T100,50; M0,50 Q25,25 50,50 T100,50"
             />
           </path>
         </svg>
@@ -98,112 +111,162 @@ const JoinForm = () => {
           </p>
         </div>
 
-        <div className="max-w-xl p-[40px] mx-auto bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div className="text-center text-xl font-bold mb-[20px]">
-            Membership Application
-          </div>
-          <form className=" flex flex-col gap-[15px]" onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-[15px]">
-              <label
-                htmlFor="full-name"
-                className="flex items-center gap-[10px] text-[#2196F3]"
-              >
-                <UserIcon /> Full Name
-              </label>
-              <input
-                required
-                type="text"
-                id="full-name"
-                onChange={(e) => setFullName(e.target.value)}
-                className="h-[40px] border-[1px] border-blue rounded-lg px-[15px]"
-              />
+        <div className="max-w-5xl p-[40px] mx-auto backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <form className="flex flex-col gap-[15px]" onSubmit={handleSubmit}>
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-[30px] sm:gap-[60px]">
+              <div className="flex flex-col w-full gap-[15px]">
+                <label
+                  htmlFor="full-name"
+                  className="flex items-center gap-[10px] text-black"
+                >
+                  Full Name :
+                </label>
+                <input
+                  required
+                  placeholder="Enter your full name..."
+                  type="text"
+                  id="full-name"
+                  onChange={(e) => setFullName(e.target.value)}
+                  className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
+                />
+              </div>
+              <div className="flex flex-col w-full gap-[15px]">
+                <label
+                  htmlFor="skills"
+                  className="flex items-center gap-[10px] text-black"
+                >
+                  Your Skills :
+                </label>
+                <input
+                  required
+                  placeholder="Your Skills..."
+                  type="text"
+                  id="skills"
+                  onChange={(e) => setSkilles(e.target.value)}
+                  className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
+                />
+              </div>
             </div>
-            <div className="flex flex-col gap-[15px]">
-              <label
-                htmlFor="email"
-                className="flex items-center gap-[10px] text-[#2196F3]"
-              >
-                <MailIcon />
-                Email
-              </label>
-              <input
-                required
-                type="text"
-                id="email"
-                onChange={(e) => setEmail(e.target.value)}
-                className="h-[40px] border-[1px] border-blue rounded-lg px-[15px]"
-              />
+
+            <div className="flex flex-col xl:flex-row gap-[60px]">
+              <div className="w-full flex flex-col gap-[20px]">
+                <div className="flex flex-col gap-[15px]">
+                  <label
+                    htmlFor="email"
+                    className="flex items-center gap-[10px] text-black"
+                  >
+                    Email :
+                  </label>
+                  <input
+                    required
+                    placeholder="info@xyz.com"
+                    type="email"
+                    id="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
+                  />
+                </div>
+                <div className="flex flex-col gap-[15px]">
+                  <label
+                    htmlFor="email"
+                    className="flex items-center gap-[10px] text-black"
+                  >
+                    Phone Number :
+                  </label>
+                  <input
+                    required
+                    placeholder="0666666666"
+                    type="number"
+                    id="email"
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
+                  />
+                </div>
+                <div className="flex flex-col gap-[15px]">
+                  <label
+                    htmlFor="email"
+                    className="flex items-center gap-[10px] text-black"
+                  >
+                    Faculty :
+                  </label>
+                  <input
+                    required
+                    placeholder="Enter faculty name ..."
+                    type="text"
+                    id="email"
+                    onChange={(e) => setFaculty(e.target.value)}
+                    className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
+                  />
+                </div>
+              </div>
+              <div className="w-full py-[20px] grid grid-flow-col-1 sm:grid-cols-2 gap-[20px] flex-wrap bg-[#EEEE]">
+                {[
+                  "WEB DEVELOPMENT",
+                  "ROBOTICS",
+                  "ELECTRONICS",
+                  "AI",
+                  "GRAPHIC DESIGN",
+                  "UI UX DESIGN",
+                  "PHOTOGRAPHY",
+                  "CYBER SECURITY",
+                  "VIDEO EDITING",
+                  "APP DEVELOPMENT",
+                ].map((interest) => (
+                  <div
+                    key={interest}
+                    className="pl-[15px] flex items-center gap-[15px]"
+                  >
+                    <input
+                      className="w-[20px] h-[20px]"
+                      type="checkbox"
+                      value={interest}
+                      onChange={handleCheckboxChange}
+                      checked={areasOfInterest.includes(interest)}
+                      disabled={
+                        !areasOfInterest.includes(interest) &&
+                        areasOfInterest.length >= 2
+                      }
+                    />
+                    <label>{interest}</label>
+                  </div>
+                ))}
+              </div>
             </div>
+
             <div className="flex flex-col gap-[15px]">
               <label
-                htmlFor="phone"
-                className="flex items-center gap-[10px] text-[#2196F3]"
+                htmlFor="whyus"
+                className="flex items-center gap-[10px] text-black"
               >
-                <PhoneIcon />
-                Phone Number
-              </label>
-              <input
-                required
-                type="number"
-                id="phone"
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                className="h-[40px] border-[1px] border-blue rounded-lg px-[15px]"
-              />
-            </div>
-            <div className="flex flex-col gap-[15px]">
-              <label
-                htmlFor="phone"
-                className="flex items-center gap-[10px] text-[#2196F3]"
-              >
-                <RocketIcon />
-                Areas of Interest
+                WHY DO YOU WANT TO JOIN US? :
               </label>
               <textarea
                 required
-                id="interest"
-                onChange={(e) => setAreasOfInterest(e.target.value)}
-                className="h-[120px] border-[1px] border-blue rounded-lg px-[15px] py-[5px]"
-              ></textarea>
+                placeholder="I want to join ELEC :"
+                id="whyus"
+                onChange={(e) => setWhyUS(e.target.value)}
+                className="h-[150px] bg-[#EEEE] rounded-lg px-[15px] py-[5px]"
+              />
             </div>
-            <button className=" bg-blue flex items-center justify-center gap-[10px] text-center py-[13px] rounded-lg text-white">
+
+            <button className="bg-blue font-semibold flex items-center justify-center gap-[10px] text-center py-[13px] rounded-lg text-white">
               <ZapIcon />
-              Power Up My Membership!
+              SEND REGISTRATION
             </button>
+
             {message && (
               <div className="text-[#008000] w-full flex items-center justify-center">
                 {message}
               </div>
             )}
             {error && (
-              <div
-                className="text-[#FF0000]"
-                w-full
-                flex
-                items-center
-                justify-center
-              >
+              <div className="text-[#FF0000] w-full flex items-center justify-center">
                 {error}
               </div>
             )}
           </form>
         </div>
       </div>
-
-      {/* Floating electrical components */}
-      {[...Array(6)].map((_, i) => (
-        <div
-          key={i}
-          className="absolute text-blue-400"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animation: `float ${5 + Math.random() * 10}s ease-in-out infinite`,
-            animationDelay: `${Math.random() * 5}s`,
-          }}
-        >
-          {["⚡", "🔌", "💡", "🔋", "🔬", "⚙️"][i]}
-        </div>
-      ))}
 
       <style jsx>{`
         @keyframes float {

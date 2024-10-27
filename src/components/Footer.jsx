@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#F3F4F6] border-t border-[#E5E7EB]">
+    <footer className="w-full overflow-hidden bg-[#F3F4F6] border-t border-[#E5E7EB]">
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
