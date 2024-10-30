@@ -24,6 +24,7 @@ const EventCard = ({ title, desc, date, location, image, images }) => {
 
     return () => {
       if (sectionRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(sectionRef.current);
       }
     };
@@ -40,7 +41,7 @@ const EventCard = ({ title, desc, date, location, image, images }) => {
                 {title}
               </p>
               <div className=" flex flex-col gap-[8px]">
-                <p className="text-[#CBD5E1] text-xs sm:text-sm xl:text-lg  max-h-[130px] overflow-y-scroll">
+                <p className="text-[#CBD5E1] scroll-style text-xs sm:text-sm xl:text-lg  max-h-[130px] overflow-y-scroll">
                   {desc}
                 </p>
                 <div className="flex flex-col gap-[4px]">

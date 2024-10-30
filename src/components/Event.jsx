@@ -84,7 +84,7 @@ const Event = () => {
   return (
     <section
       id="event"
-      className="flex justify-center py-12 md:py-24 lg:py-32 bg-[#111827] overflow-hidden relative"
+      className="flex justify-center font-popinFont py-12 md:py-24 lg:py-32 bg-[#111827] overflow-hidden relative"
     >
       {/* Animated circuit background */}
       <div className="absolute inset-0 z-0 opacity-10">
@@ -117,7 +117,7 @@ const Event = () => {
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center justify-between space-y-12">
           <div className="space-y-4 text-center lg:text-left">
-            <h1 className="text-5xl text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
+            <h1 className="text-5xl font-dtFont text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
               Next Elec Event
             </h1>
             <p className="max-w-[600px] text-center text-[#A1A1AA] md:text-xl">
@@ -192,7 +192,7 @@ const Event = () => {
           <div className=" relative pt-[120px]">
             <div className=" absolute line-center h-[90%] sm:h-[77%] z-[-1] w-[3px] bg-[#18aeed]"></div>
             <div>
-              <h1 className="text-5xl text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
+              <h1 className="text-5xl font-dtFont text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
                 Previus Elec Events
               </h1>
             </div>

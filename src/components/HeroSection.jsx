@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className=" bg-[#111827] relative h-[100vh] overflow-hidden flex items-center justify-center"
+      className=" bg-[#111827] font-popinFont relative h-[100vh] overflow-hidden flex items-center justify-center"
     >
       <div className=" hidden lg:block absolute right-0 top-[20%]">
         <svg

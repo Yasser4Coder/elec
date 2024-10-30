@@ -21,7 +21,12 @@ module.exports = {
         "2xl": "6rem",
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        dtFont: ["dtFont", "sans-serif"],
+        popinFont: ["popinFont", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

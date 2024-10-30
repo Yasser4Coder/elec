@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed border-b-[1px] bg-[#111827] border-[#18adedaf] w-full z-50 overflow-hidden">
+    <div className="fixed font-dtFont border-b-[1px] bg-[#111827] border-[#18adedaf] w-full z-50 overflow-hidden">
       {/* Circle Animation */}
       <div className="Elec-circle absolute z-50 bottom-[-6px] flex items-center">
         <div className="h-[3px] line w-[80px]  bg-blue"></div>
@@ -34,39 +34,39 @@ const Header = () => {
           <div className="links hidden md:flex items-center gap-[20px] lg:gap-[40px]">
             <Link
               to="home"
-              className="text-white text-lg linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
+              className="text-white text-md linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
             >
               Home
             </Link>
             <Link
               to="about"
-              className="text-white text-lg linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
+              className="text-white text-md linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
             >
               About
             </Link>
             <Link
               to="event"
-              className="text-white text-lg linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
+              className="text-white text-md linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
             >
               Events
             </Link>
             <Link
-              to="activities"
-              className="text-white text-lg linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
-            >
-              Activities
-            </Link>
-            <Link
               to="members"
-              className="text-white text-lg linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
+              className="text-white text-md linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
             >
               Members
+            </Link>
+            <Link
+              to="activities"
+              className="text-white text-md linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
+            >
+              Activities
             </Link>
           </div>
           <div className="hidden md:flex items-center gap-[20px]">
             <Link
               to="join"
-              className=" py-[10px] cursor-pointer px-[30px] flex items-center gap-[5px] rounded-xl bg-[#18aeed] border-[#18aeed] text-white border-[2px] font-semibold hover:bg-[#18aeed] hover:text-white transition-all duration-300 transform hover:scale-105"
+              className=" py-[6px] cursor-pointer px-[30px] flex items-center gap-[5px] rounded-xl bg-[#18aeed] border-[#18aeed] text-white border-[2px] font-semibold hover:bg-[#18aeed] hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               Join
             </Link>

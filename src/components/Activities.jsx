@@ -38,7 +38,7 @@ const Activities = () => {
   return (
     <section
       id="activities"
-      className="w-full py-12 flex justify-center md:py-24 lg:py-32 bg-[#111827] overflow-hidden relative"
+      className="w-full py-12 font-popinFont flex justify-center md:py-24 lg:py-32 bg-[#111827] overflow-hidden relative"
     >
       {/* Animated circuit board background */}
       <div className="absolute inset-0 z-0 opacity-20">
@@ -70,7 +70,7 @@ const Activities = () => {
 
       <div className="container px-4 md:px-6 relative z-10">
         <div className="text-center mb-12">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
+          <h1 className="text-5xl font-dtFont sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
             Elec Activities
           </h1>
           <p className="text-xl text-[#A1A1AA] max-w-2xl mx-auto">

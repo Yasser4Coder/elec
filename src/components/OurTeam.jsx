@@ -1,76 +1,21 @@
-import { ZapIcon, UserIcon, BoltIcon } from "lucide-react";
-import yasser from "../images/2--.jpg";
-import TahaLaib from "../images/4----.jpg";
-import yazid from "../images/3 ))).jpg";
-import Lina from "../images/IMG_9282.jpg";
-import Mohamed from "../images/1 .jpg";
-import taha from "../images/taha.jpg";
-import khalil from "../images/khalil.jpg";
-import chourouk from "../images/chourouk.jpg";
-import issra from "../images/issra.jpg";
-const members = [
-  {
-    name: "Taha Rouabhi",
-    role: "President",
-    avatar: taha,
-  },
-  {
-    name: "Khalil Benchebha",
-    role: "Vice President HR team manager",
-    avatar: khalil,
-  },
-  {
-    name: "Taha Laib",
-    role: "Vice President ER team manager",
-    avatar: TahaLaib,
-  },
-  {
-    name: "Mohamed Lazili",
-    role: "Elec Lab Manager",
-    avatar: Mohamed,
-  },
-  {
-    name: "Yazid Bekkai",
-    role: "Dev Team Manager Mobile developer",
-    avatar: yazid,
-  },
-  {
-    name: "Chourouk Mihoubi",
-    role: "General Secretary",
-    avatar: chourouk,
-  },
-  {
-    name: "Yasser Benseghier",
-    role: "Dev Team Manager Web Developer",
-    avatar: yasser,
-  },
-  {
-    name: "Lina Abderrahim",
-    role: "Media Team Manager",
-    avatar: Lina,
-  },
-
-  {
-    name: "Israa Benaros",
-    role: "Finance Team Manager",
-    avatar: issra,
-  },
-  {
-    name: "chaba",
-    role: "Finance Team Manager",
-    avatar: "",
-  },
-  {
-    name: "",
-    role: "Finance Team Manager",
-    avatar: "",
-  },
-];
+import { ZapIcon, BoltIcon } from "lucide-react";
+import img1 from "../images/elecTeam/Card-1.png";
+import img2 from "../images/elecTeam/Card-2.png";
+import img3 from "../images/elecTeam/Card-3.png";
+import img4 from "../images/elecTeam/Card.png";
+import img5 from "../images/elecTeam/Card-4.png";
+import img6 from "../images/elecTeam/Card-5.png";
+import img7 from "../images/elecTeam/Card-6.png";
+import img8 from "../images/elecTeam/Card-7.png";
+import img9 from "../images/elecTeam/Card-8.png";
+import img10 from "../images/elecTeam/Card-9.png";
+import img11 from "../images/elecTeam/Card-10.png";
+import img12 from "../images/elecTeam/Card-11.png";
 const OurTeam = () => {
   return (
     <section
       id="members"
-      className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-yellow-100 to-blue-100 overflow-hidden relative"
+      className="w-full font-popinFont bg-[#111827] py-12 md:py-24 lg:py-32 bg-gradient-to-br from-yellow-100 to-blue-100 overflow-hidden relative"
     >
       {/* Animated circuit illustrations */}
       <div className="absolute inset-0 z-0 opacity-20">
@@ -101,41 +46,19 @@ const OurTeam = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl text-[#2563EB] mb-4">
-            Meet Our Elec Team
-          </h2>
-          <p className="text-xl text-[#4B5563] max-w-2xl mx-auto">
-            The bright sparks behind our club's success!
-          </p>
-        </div>
-
-        <div className=" container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {members.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white/80 backdrop-blur-sm hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-              >
-                <div className="p-6 flex flex-col items-center text-center">
-                  <div className="w-24 h-24 rounded-full bg-[#BFDBFE] mb-4 overflow-hidden relative">
-                    <img
-                      src={member.avatar}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-[#3B82F6]/70">
-                      <UserIcon className="w-12 h-12 text-white" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#1F2937] mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-[#4B5563]">{member.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className=" container flex justify-center flex-wrap gap-3 mx-auto">
+          <img src={img4} alt="" width={310} />
+          <img src={img1} alt="" width={310} />
+          <img src={img2} alt="" width={310} />
+          <img src={img3} alt="" width={310} />
+          <img src={img5} alt="" width={310} />
+          <img src={img6} alt="" width={310} />
+          <img src={img7} alt="" width={310} />
+          <img src={img8} alt="" width={310} />
+          <img src={img9} alt="" width={310} />
+          <img src={img10} alt="" width={310} />
+          <img src={img11} alt="" width={310} />
+          <img src={img12} alt="" width={310} />
         </div>
       </div>
 

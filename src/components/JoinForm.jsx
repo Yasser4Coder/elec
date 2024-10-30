@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../firebase";
 import { getFirestore, addDoc, collection } from "firebase/firestore";
-import { ZapIcon } from "lucide-react";
 
 const JoinForm = () => {
   const [fullName, setFullName] = useState("");
@@ -69,7 +68,7 @@ const JoinForm = () => {
   return (
     <section
       id="join"
-      className="w-full flex justify-center py-12 md:py-24 lg:py-32 bg-gradient-to-br from-yellow-100 via-blue-100 to-green-100 overflow-hidden relative"
+      className="w-full font-popinFont flex justify-center py-12 md:py-24 lg:py-32 bg-gradient-to-br from-yellow-100 via-blue-100 to-green-100 overflow-hidden relative"
     >
       {loading && (
         <div className="center-loading-spinner flex items-center justify-center">
@@ -102,7 +101,7 @@ const JoinForm = () => {
 
       <div className="container px-4 md:px-6 relative z-10">
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <h2 className="text-4xl mt-[40px] font-extrabold tracking-tighter sm:text-5xl md:text-6xl text-[#2563EB] mb-4">
+          <h2 className="text-4xl font-dtFont mt-[40px] font-extrabold tracking-tighter sm:text-5xl md:text-6xl text-[#2563EB] mb-4">
             Join Our Crew!
           </h2>
           <p className="text-xl text-gray-600">
@@ -249,8 +248,7 @@ const JoinForm = () => {
               />
             </div>
 
-            <button className="bg-blue font-semibold flex items-center justify-center gap-[10px] text-center py-[13px] rounded-lg text-white">
-              <ZapIcon />
+            <button className="bg-blue font-dtFont font-semibold flex items-center justify-center gap-[10px] text-center py-[13px] rounded-lg text-white">
               SEND REGISTRATION
             </button>
 
