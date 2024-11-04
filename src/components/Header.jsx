@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed font-dtFont border-b-[1px] bg-[#111827] border-[#18adedaf] w-full z-50 overflow-hidden">
+    <div className="font-dtFont overflow-hidden border-b-[1px] bg-[#111827] border-[#18adedaf]">
       {/* Circle Animation */}
       <div className="Elec-circle absolute z-50 bottom-[-6px] flex items-center">
         <div className="h-[3px] line w-[80px]  bg-blue"></div>
