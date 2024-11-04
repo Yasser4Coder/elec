@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <div className="font-dtFont overflow-hidden border-b-[1px] bg-[#111827] border-[#18adedaf]">
+    <div className="font-dtFont relative overflow-hidden border-b-[1px] bg-[#111827] border-[#18adedaf]">
       {/* Circle Animation */}
       <div className="Elec-circle absolute z-50 bottom-[-6px] flex items-center">
         <div className="h-[3px] line w-[80px]  bg-blue"></div>
@@ -55,12 +55,6 @@ const Header = () => {
               className="text-white text-md linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
             >
               Members
-            </Link>
-            <Link
-              to="activities"
-              className="text-white text-md linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
-            >
-              Activities
             </Link>
           </div>
           <div className="hidden md:flex items-center gap-[20px]">

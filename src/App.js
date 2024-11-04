@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import JoinForm from "./components/JoinForm";
-import Memories from "./components/Memories";
+// import Memories from "./components/Memories";
 import OurTeam from "./components/OurTeam";
 import logos from "./images/logos.svg";
 
@@ -22,7 +22,7 @@ function App() {
         </div>
       </div>
       <Event />
-      <Memories />
+      {/* <Memories /> */}
       <OurTeam />
       {/* <Activities /> */}
       <JoinForm />
