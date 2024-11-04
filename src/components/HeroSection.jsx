@@ -70,9 +70,8 @@ const HeroSection = () => {
               </linearGradient>
             </defs>
           </svg>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
-            Spark your passion for electronics, join the best place to grow your
-            knowledge!
+          <p className="text-2xl mb-8 max-w-2xl mx-auto text-white">
+            On Another level !
           </p>
           <Link
             to="join"

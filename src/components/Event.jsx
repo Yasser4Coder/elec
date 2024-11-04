@@ -41,7 +41,7 @@ import w5 from "../images/workshops/5.jpg";
 
 import { CalendarIcon } from "lucide-react";
 
-import amroun from "../images/photo_2024-10-22_23-48-27.jpg";
+import amroun from "../images/nextEvent/od3.png";
 import EventCard from "./EventCard";
 
 const coImages = [co1, co2, co3, co4, co5, co6];
@@ -57,7 +57,7 @@ const Event = () => {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const target = new Date("2024-10-29T08:00:00");
+    const target = new Date("2024-11-06T09:00:00");
 
     const interval = setInterval(() => {
       const now = new Date();
@@ -117,7 +117,7 @@ const Event = () => {
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center justify-between space-y-12">
           <div className="space-y-4 text-center lg:text-left">
-            <h1 className="text-5xl font-dtFont text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
+            <h1 className="text-5xl font-dtFont text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text text-white">
               Next Elec Event
             </h1>
             <p className="max-w-[600px] text-center text-[#A1A1AA] md:text-xl">
@@ -156,7 +156,7 @@ const Event = () => {
 
                   <div className="space-y-2 flex flex-col gap-[18px] xl:gap-[32px]">
                     <p className="text-[#F1F5F9] text-2xl xl:text-3xl font-semibold">
-                      البحر الشاسع لدخول عالم البرمجة من بابها الواسع
+                      The Open Day
                     </p>
                     <div className=" flex flex-col gap-[8px]">
                       <p className="text-[#CBD5E1] event-card-p text-sm xl:text-lg sm:h-[100px] lg:h-[152px] xl:h-[190px] 2xl:h-[150px]">
@@ -192,8 +192,8 @@ const Event = () => {
           <div className=" relative pt-[120px]">
             <div className=" absolute line-center h-[90%] sm:h-[77%] z-[-1] w-[3px] bg-[#18aeed]"></div>
             <div>
-              <h1 className="text-5xl font-dtFont text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#18aeed] via-[#f2f2f2] to-[#18aeed] animate-gradient">
-                Previus Elec Events
+              <h1 className="text-5xl font-dtFont text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text text-white">
+                Previous Elec Events
               </h1>
             </div>
             <div className="flex mt-[80px] flex-col gap-[120px]">
@@ -229,6 +229,9 @@ const Event = () => {
               />
               <EventCard
                 title={"Designer's Day"}
+                desc={
+                  "A one-day event crafted for budding designers. The morning focused on theoretical knowledge to build a solid foundation in design principles. In the afternoon, participants dove into hands-on workshops, exploring essential tools like Photoshop and Illustrator to bring creative ideas to life."
+                }
                 date={"February, 16, 2023"}
                 location={"MBU - M'sila"}
                 image={des}
@@ -237,6 +240,9 @@ const Event = () => {
               <EventCard
                 title={"Elec Work Shops"}
                 location={"MBU - M'sila & Online"}
+                desc={
+                  "Our club offers a variety of interactive workshops, both online and on-site, that delve into design, coding, AI, and electronics. These sessions are designed to equip members with practical skills and hands-on experience in diverse tech fields."
+                }
                 image={elec}
                 images={workshops}
               />

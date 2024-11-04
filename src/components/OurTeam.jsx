@@ -46,6 +46,9 @@ const OurTeam = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <h1 className="text-5xl font-dtFont text-center sm:text-6xl font-bold mb-12 text-transparent bg-clip-text text-white">
+          OUR CORE TEAM
+        </h1>
         <div className=" container flex justify-center flex-wrap gap-3 mx-auto">
           <img src={img4} alt="" width={310} />
           <img src={img1} alt="" width={310} />

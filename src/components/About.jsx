@@ -10,7 +10,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen overflow-hidden flex items-center justify-center"
+      className="min-h-screen z-40 relative overflow-hidden flex items-center justify-center"
     >
       <div className=" container mx-auto flex items-center justify-center">
         <div className="flex gap-[20px] items-center flex-col">
