@@ -50,18 +50,39 @@ const OurTeam = () => {
           OUR CORE TEAM
         </h1>
         <div className=" container flex justify-center flex-wrap gap-3 mx-auto">
-          <img src={img4} alt="" width={310} />
-          <img src={img1} alt="" width={310} />
-          <img src={img2} alt="" width={310} />
-          <img src={img3} alt="" width={310} />
-          <img src={img5} alt="" width={310} />
-          <img src={img6} alt="" width={310} />
-          <img src={img7} alt="" width={310} />
-          <img src={img8} alt="" width={310} />
-          <img src={img9} alt="" width={310} />
-          <img src={img10} alt="" width={310} />
-          <img src={img11} alt="" width={310} />
-          <img src={img12} alt="" width={310} />
+          <div>
+            <img src={img4} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img1} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img2} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img3} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img5} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img6} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img7} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img9} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img10} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img11} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img12} alt="" width={310} />
+          </div>
         </div>
       </div>
 

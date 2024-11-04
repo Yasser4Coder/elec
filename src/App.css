@@ -132,3 +132,7 @@
   .responsive-svg {
   }
 } */
+
+.team-card-hover:hover {
+  background: #18aeed;
+}
