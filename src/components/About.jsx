@@ -26,8 +26,8 @@ const About = () => {
                 </h1>
               </div>
               <p className="text-[#000000a2]">
-                Connect with fellow electronics enthusiasts and build lasting
-                friendships.
+                AI Department Delve into the world of artificial intelligence,
+                exploring machine learning and its applications.
               </p>
             </div>
             <div className="border-[1px] about-card transition-all duration-300 transform hover:scale-105 p-[30px] rounded-lg border-[#18aeed]">
@@ -38,8 +38,8 @@ const About = () => {
                 </h1>
               </div>
               <p className="text-[#000000a2]">
-                Connect with fellow electronics enthusiasts and build lasting
-                friendships.
+                Cyber security Department Protect the digital realm by learning
+                about network security, data privacy, and ethical hacking.
               </p>
             </div>
             <div className="border-[1px] about-card transition-all duration-300 transform hover:scale-105 p-[30px] rounded-lg border-[#18aeed]">
@@ -50,8 +50,9 @@ const About = () => {
                 </h1>
               </div>
               <p className="text-[#000000a2]">
-                Connect with fellow electronics enthusiasts and build lasting
-                friendships.
+                App & Web Department Develop cutting-edge applications and
+                websites, mastering programming languages and web development
+                frameworks.
               </p>
             </div>
             <div className="border-[1px] about-card transition-all duration-300 transform hover:scale-105 p-[30px] rounded-lg border-[#18aeed]">
@@ -62,8 +63,8 @@ const About = () => {
                 </h1>
               </div>
               <p className="text-[#000000a2]">
-                Connect with fellow electronics enthusiasts and build lasting
-                friendships.
+                Electronics Lab Experiment with hardware and electronics,
+                building circuits and prototyping devices.
               </p>
             </div>
             <div className="border-[1px] about-card transition-all duration-300 transform hover:scale-105 p-[30px] rounded-lg border-[#18aeed]">
@@ -74,8 +75,8 @@ const About = () => {
                 </h1>
               </div>
               <p className="text-[#000000a2]">
-                Connect with fellow electronics enthusiasts and build lasting
-                friendships.
+                Design Department Unleash your creativity and design innovative
+                solutions, from user interfaces to physical products.
               </p>
             </div>
             <div className="border-[1px] about-card transition-all duration-300 transform hover:scale-105 p-[30px] rounded-lg border-[#18aeed]">
@@ -86,8 +87,8 @@ const About = () => {
                 </h1>
               </div>
               <p className="text-[#000000a2]">
-                Connect with fellow electronics enthusiasts and build lasting
-                friendships.
+                Office The central hub for club activities, providing support,
+                resources, and a collaborative space.
               </p>
             </div>
           </div>
