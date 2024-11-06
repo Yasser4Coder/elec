@@ -159,14 +159,17 @@ const Event = () => {
                       The Open Day
                     </p>
                     <div className=" flex flex-col gap-[8px]">
-                      <p className="text-[#CBD5E1] event-card-p text-sm xl:text-lg sm:h-[100px] lg:h-[152px] xl:h-[190px] 2xl:h-[150px]">
-                        دورة "البحر الشاسع لدخول عالم البرمجة من بابها الواسع"،
-                        من إعداد الأستاذ عمرون حسام الدين، هي بوابة شاملة
-                        ومتكاملة لتمكينك من استكشاف عالم البرمجة بكل تفاصيله.
-                        صُممت هذه الدورة لتبسط المفاهيم الأساسية وتعتمد منهجية
-                        تدريبية تتدرج من الأساسيات إلى التطبيقات العملية. ستحصل
-                        من خلالها على فهم قوي للغات البرمجة الحديثة، هيكليات
-                        البرمجة، وأساسيات تطوير التطبيقات البرمجية.
+                      <p className="text-[#CBD5E1] event-card-p text-sm xl:text-lg sm:h-[150px] lg:h-[202px] xl:h-[240px] 2xl:h-[200px]">
+                        Elec Open Day 2024 An exciting event that offers a rich
+                        experience in technology, innovation, and creativity. We
+                        work on a variety of fields, including AI, design,
+                        coding, and more. With interactive activities,
+                        innovative project displays, and plenty of networking
+                        opportunities, this event is designed for those
+                        passionate about learning, growth, and exploring the
+                        endless possibilities within the tech world. Join us to
+                        connect with a crew eager to collaborate and discover
+                        new opportunities.
                       </p>
                       <div className="flex flex-col gap-[4px]">
                         <div className="flex items-center text-[#94B8A3] text-lg xl:text-xl">
