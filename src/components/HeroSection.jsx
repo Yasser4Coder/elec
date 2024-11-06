@@ -43,9 +43,9 @@ const HeroSection = () => {
           <div className=" absolute w-full h-full">
             <BgAnimation />
           </div>
-          <img src={logo} width={180.65} alt="" className="mb-5 mx-auto" />
+          <img src={logo} width={180.65} alt="" className="mb-5 mx-auto z-10" />
           <svg
-            className="responsive-svg w-[350px] sm:w-[407px] h-[57px] xl:w-[507px] xl:h-[57px]"
+            className="responsive-svg z-10 w-[350px] sm:w-[407px] h-[57px] xl:w-[507px] xl:h-[57px]"
             width="507"
             height="57"
             viewBox="0 0 607 57"
@@ -70,7 +70,7 @@ const HeroSection = () => {
               </linearGradient>
             </defs>
           </svg>
-          <p className="text-2xl mb-8 max-w-2xl mx-auto text-white">
+          <p className="text-2xl z-10 mb-8 max-w-2xl mx-auto text-white">
             On Another level !
           </p>
           <Link

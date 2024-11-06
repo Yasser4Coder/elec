@@ -6,10 +6,9 @@ import img4 from "../images/elecTeam/Card.png";
 import img5 from "../images/elecTeam/Card-4.png";
 import img6 from "../images/elecTeam/Card-5.png";
 import img7 from "../images/elecTeam/Card-6.png";
-import img8 from "../images/elecTeam/Card-7.png";
+import img8 from "../images/elecTeam/Card-12.png";
 import img9 from "../images/elecTeam/Card-8.png";
 import img10 from "../images/elecTeam/Card-9.png";
-import img11 from "../images/elecTeam/Card-10.png";
 import img12 from "../images/elecTeam/Card-11.png";
 const OurTeam = () => {
   return (
@@ -77,8 +76,9 @@ const OurTeam = () => {
           <div>
             <img src={img10} alt="" width={310} />
           </div>
+
           <div>
-            <img src={img11} alt="" width={310} />
+            <img src={img8} alt="" width={310} />
           </div>
           <div>
             <img src={img12} alt="" width={310} />

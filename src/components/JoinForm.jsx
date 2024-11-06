@@ -21,7 +21,7 @@ const JoinForm = () => {
     setAreasOfInterest((prev) => {
       if (prev.includes(value)) {
         return prev.filter((interest) => interest !== value); // Remove if already selected
-      } else if (prev.length < 2) {
+      } else if (prev.length < 3) {
         return [...prev, value]; // Add if less than 2 selected
       } else {
         return prev; // Keep as is if 2 are already selected
@@ -35,8 +35,8 @@ const JoinForm = () => {
     setError("");
     setMessage("");
 
-    if (areasOfInterest.length !== 2) {
-      setError("Please select exactly two areas of interest.");
+    if (areasOfInterest.length !== 3) {
+      setError("Please select exactly three areas of interest.");
       setLoading(false);
       return;
     }
@@ -112,49 +112,30 @@ const JoinForm = () => {
 
         <div className="max-w-5xl p-[40px] mx-auto backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300">
           <form className="flex flex-col gap-[15px]" onSubmit={handleSubmit}>
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-[30px] sm:gap-[60px]">
-              <div className="flex flex-col w-full gap-[15px]">
-                <label
-                  htmlFor="full-name"
-                  className="flex items-center gap-[10px] text-black"
-                >
-                  Full Name :
-                </label>
-                <input
-                  required
-                  placeholder="Enter your full name..."
-                  type="text"
-                  id="full-name"
-                  onChange={(e) => setFullName(e.target.value)}
-                  className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
-                />
-              </div>
-              <div className="flex flex-col w-full gap-[15px]">
-                <label
-                  htmlFor="skills"
-                  className="flex items-center gap-[10px] text-black"
-                >
-                  Your Skills :
-                </label>
-                <input
-                  required
-                  placeholder="Your Skills..."
-                  type="text"
-                  id="skills"
-                  onChange={(e) => setSkilles(e.target.value)}
-                  className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col xl:flex-row gap-[60px]">
-              <div className="w-full flex flex-col gap-[20px]">
-                <div className="flex flex-col gap-[15px]">
+            <div className=" flex flex-col sm:flex-row gap-[60px] h-full">
+              <div className="flex w-full flex-col items-center justify-between gap-[20px] sm:gap-[30px]">
+                <div className="flex flex-col w-full gap-[15px]">
+                  <label
+                    htmlFor="full-name"
+                    className="flex items-center gap-[10px] text-black"
+                  >
+                    *Full Name :
+                  </label>
+                  <input
+                    required
+                    placeholder="Enter your full name..."
+                    type="text"
+                    id="full-name"
+                    onChange={(e) => setFullName(e.target.value)}
+                    className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
+                  />
+                </div>
+                <div className="flex w-full flex-col gap-[15px]">
                   <label
                     htmlFor="email"
                     className="flex items-center gap-[10px] text-black"
                   >
-                    Email :
+                    *Email :
                   </label>
                   <input
                     required
@@ -165,12 +146,12 @@ const JoinForm = () => {
                     className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
                   />
                 </div>
-                <div className="flex flex-col gap-[15px]">
+                <div className="flex w-full flex-col gap-[15px]">
                   <label
                     htmlFor="email"
                     className="flex items-center gap-[10px] text-black"
                   >
-                    Phone Number :
+                    *Phone Number :
                   </label>
                   <input
                     required
@@ -181,6 +162,52 @@ const JoinForm = () => {
                     className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
                   />
                 </div>
+              </div>
+
+              <div className="flex w-full flex-col min-h-full gap-[15px]">
+                <label
+                  htmlFor="skills"
+                  className="flex items-center gap-[10px] text-black"
+                >
+                  Your Skills :
+                </label>
+                <div className="py-[20px] grid grid-flow-col-1 min-h-[87.5%] sm:grid-cols-2 gap-[20px] flex-wrap bg-[#EEEE]">
+                  {[
+                    "WEB DEVELOPMENT",
+                    "ROBOTICS",
+                    "ELECTRONICS",
+                    "AI",
+                    "GRAPHIC DESIGN",
+                    "UI UX DESIGN",
+                    "PHOTOGRAPHY",
+                    "CYBER SECURITY",
+                    "VIDEO EDITING",
+                    "APP DEVELOPMENT",
+                  ].map((interest) => (
+                    <div
+                      key={interest}
+                      className="pl-[15px] flex items-center gap-[15px]"
+                    >
+                      <input
+                        className="w-[20px] h-[20px]"
+                        type="checkbox"
+                        value={interest}
+                        onChange={handleCheckboxChange}
+                        checked={areasOfInterest.includes(interest)}
+                        disabled={
+                          !areasOfInterest.includes(interest) &&
+                          areasOfInterest.length >= 3
+                        }
+                      />
+                      <label>{interest}</label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col xl:flex-row gap-[60px]">
+              <div className="w-full flex flex-col gap-[20px]">
                 <div className="flex flex-col gap-[15px]">
                   <label
                     htmlFor="email"
@@ -189,7 +216,6 @@ const JoinForm = () => {
                     Faculty :
                   </label>
                   <input
-                    required
                     placeholder="Enter faculty name ..."
                     type="text"
                     id="email"
@@ -198,37 +224,20 @@ const JoinForm = () => {
                   />
                 </div>
               </div>
-              <div className="w-full py-[20px] grid grid-flow-col-1 sm:grid-cols-2 gap-[20px] flex-wrap bg-[#EEEE]">
-                {[
-                  "WEB DEVELOPMENT",
-                  "ROBOTICS",
-                  "ELECTRONICS",
-                  "AI",
-                  "GRAPHIC DESIGN",
-                  "UI UX DESIGN",
-                  "PHOTOGRAPHY",
-                  "CYBER SECURITY",
-                  "VIDEO EDITING",
-                  "APP DEVELOPMENT",
-                ].map((interest) => (
-                  <div
-                    key={interest}
-                    className="pl-[15px] flex items-center gap-[15px]"
-                  >
-                    <input
-                      className="w-[20px] h-[20px]"
-                      type="checkbox"
-                      value={interest}
-                      onChange={handleCheckboxChange}
-                      checked={areasOfInterest.includes(interest)}
-                      disabled={
-                        !areasOfInterest.includes(interest) &&
-                        areasOfInterest.length >= 2
-                      }
-                    />
-                    <label>{interest}</label>
-                  </div>
-                ))}
+              <div className="flex flex-col w-full gap-[15px]">
+                <label
+                  htmlFor="skills"
+                  className="flex items-center gap-[10px] text-black"
+                >
+                  Other Skills :
+                </label>
+                <input
+                  placeholder="Other Skills..."
+                  type="text"
+                  id="skills"
+                  onChange={(e) => setSkilles(e.target.value)}
+                  className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
+                />
               </div>
             </div>
 
@@ -240,7 +249,6 @@ const JoinForm = () => {
                 WHY DO YOU WANT TO JOIN US? :
               </label>
               <textarea
-                required
                 placeholder="I want to join ELEC :"
                 id="whyus"
                 onChange={(e) => setWhyUS(e.target.value)}
