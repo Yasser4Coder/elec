@@ -169,7 +169,7 @@ const JoinForm = () => {
                   htmlFor="skills"
                   className="flex items-center gap-[10px] text-black"
                 >
-                  Your Skills :
+                  areas of interest :
                 </label>
                 <div className="py-[20px] grid grid-flow-col-1 min-h-[87.5%] sm:grid-cols-2 gap-[20px] flex-wrap bg-[#EEEE]">
                   {[
@@ -229,7 +229,7 @@ const JoinForm = () => {
                   htmlFor="skills"
                   className="flex items-center gap-[10px] text-black"
                 >
-                  Other Skills :
+                  Your Skills :
                 </label>
                 <input
                   placeholder="Other Skills..."
