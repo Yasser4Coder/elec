@@ -35,7 +35,7 @@ const JoinForm = () => {
     setError("");
     setMessage("");
 
-    if (areasOfInterest.length !== 1) {
+    if (areasOfInterest.length < 1) {
       setError("Please select one areas of interest.");
       setLoading(false);
       return;
