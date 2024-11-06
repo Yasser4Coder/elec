@@ -159,7 +159,7 @@ const Event = () => {
                       The Open Day
                     </p>
                     <div className=" flex flex-col gap-[8px]">
-                      <p className="text-[#CBD5E1] event-card-p text-sm xl:text-lg sm:h-[150px] lg:h-[202px] xl:h-[240px] 2xl:h-[200px]">
+                      <p className="text-[#CBD5E1] overflow-y-auto event-card-p text-sm xl:text-lg sm:h-[150px] lg:h-[202px] xl:h-[240px] 2xl:h-[200px]">
                         Elec Open Day 2024 An exciting event that offers a rich
                         experience in technology, innovation, and creativity. We
                         work on a variety of fields, including AI, design,
