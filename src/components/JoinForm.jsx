@@ -196,7 +196,7 @@ const JoinForm = () => {
                         checked={areasOfInterest.includes(interest)}
                         disabled={
                           !areasOfInterest.includes(interest) &&
-                          areasOfInterest.length >= 3
+                          areasOfInterest.length >= 2
                         }
                       />
                       <label>{interest}</label>
