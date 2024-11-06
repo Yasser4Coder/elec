@@ -218,7 +218,6 @@ const JoinForm = () => {
                   <input
                     placeholder="Enter faculty name ..."
                     type="text"
-                    id="email"
                     onChange={(e) => setFaculty(e.target.value)}
                     className="h-[45px] bg-[#EEEEEE] rounded-md px-[15px]"
                   />
