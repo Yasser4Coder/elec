@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 import "../firebase";
-import {
-  getFirestore,
-  addDoc,
-  collection,
-  getDocs,
-  query,
-  where,
-  Timestamp,
-} from "firebase/firestore";
-
-import { TriangleAlert } from "lucide-react";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
 
 const JoinForm = () => {
   const [fullName, setFullName] = useState("");
@@ -32,28 +22,11 @@ const JoinForm = () => {
       if (prev.includes(value)) {
         return prev.filter((interest) => interest !== value); // Remove if already selected
       } else if (prev.length < 3) {
-        return [...prev, value]; // Add if less than 3 selected
+        return [...prev, value]; // Add if less than 2 selected
       } else {
-        return prev; // Keep as is if 3 are already selected
+        return prev; // Keep as is if 2 are already selected
       }
     });
-  };
-
-  const checkIfSubmittedRecently = async () => {
-    const q = query(collection(db, "users"), where("email", "==", email));
-    const querySnapshot = await getDocs(q);
-
-    if (!querySnapshot.empty) {
-      const lastSubmission = querySnapshot.docs[0].data().timestamp;
-      const now = Timestamp.now();
-      const differenceInHours = (now.seconds - lastSubmission.seconds) / 3600;
-
-      if (differenceInHours < 24) {
-        return true; // User has submitted in the last 24 hours
-      }
-    }
-
-    return false; // No recent submission
   };
 
   const handleSubmit = async (e) => {
@@ -63,20 +36,12 @@ const JoinForm = () => {
     setMessage("");
 
     if (areasOfInterest.length < 1) {
-      setError("Please select one area of interest.");
+      setError("Please select one areas of interest.");
       setLoading(false);
       return;
     }
 
     try {
-      const recentlySubmitted = await checkIfSubmittedRecently();
-
-      if (recentlySubmitted) {
-        setError("You can only submit one application every 24 hours.");
-        setLoading(false);
-        return;
-      }
-
       await addDoc(collection(db, "users"), {
         fullName: fullName,
         email: email,
@@ -85,9 +50,7 @@ const JoinForm = () => {
         skills: skilles,
         WhyUS: WhyUS,
         Faculty: faculty,
-        timestamp: Timestamp.now(), // Store the current time of submission
       });
-
       setLoading(false);
       setMessage("Welcome to Our Crew!");
 
@@ -145,22 +108,10 @@ const JoinForm = () => {
             Connect with fellow enthusiasts and spark your electrical
             engineering journey!
           </p>
-
-          <div className="flex gap-[4px] p-[15px] rounded-lg bg-[#f8be35af] w-full mt-[20px]">
-            <span>
-              <TriangleAlert className="" />
-            </span>
-            <span>
-              Important Notice: Please choose your information carefully. You
-              can only submit one registration every 24 hours. Once submitted,
-              you will need to wait 24 hours before applying again.
-            </span>
-          </div>
         </div>
 
         <div className="max-w-5xl p-[40px] mx-auto backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300">
           <form className="flex flex-col gap-[15px]" onSubmit={handleSubmit}>
-            {/* Form content remains the same */}
             <div className=" flex flex-col sm:flex-row gap-[60px] h-full">
               <div className="flex w-full flex-col items-center justify-between gap-[20px] sm:gap-[30px]">
                 <div className="flex flex-col w-full gap-[15px]">
@@ -303,6 +254,7 @@ const JoinForm = () => {
                 className="h-[150px] bg-[#EEEE] rounded-lg px-[15px] py-[5px]"
               />
             </div>
+
             <button className="bg-blue font-dtFont font-semibold flex items-center justify-center gap-[10px] text-center py-[13px] rounded-lg text-white">
               SEND REGISTRATION
             </button>
@@ -320,6 +272,18 @@ const JoinForm = () => {
           </form>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(10deg);
+          }
+        }
+      `}</style>
     </section>
   );
 };
