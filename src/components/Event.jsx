@@ -57,7 +57,7 @@ const Event = () => {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const target = new Date("2024-11-13T09:00:00");
+    const target = new Date("2024-11-13T10:00:00");
 
     const interval = setInterval(() => {
       const now = new Date();
