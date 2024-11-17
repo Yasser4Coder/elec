@@ -10,6 +10,8 @@ import {
   Timestamp,
 } from "firebase/firestore";
 
+const closeRegistrations = true;
+
 const JoinForm = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -60,44 +62,49 @@ const JoinForm = () => {
     setError("");
     setMessage("");
 
-    if (areasOfInterest.length < 1) {
-      setError("Please select one area of interest.");
-      setLoading(false);
-      return;
-    }
+    // close reg
+    setLoading(false);
+    setError("We are sorry the registrations are closed");
+    // here all
 
-    try {
-      const recentlySubmitted = await checkIfSubmittedRecently();
+    // if (areasOfInterest.length < 1) {
+    //   setError("Please select one area of interest.");
+    //   setLoading(false);
+    //   return;
+    // }
 
-      if (recentlySubmitted) {
-        setError("You can only submit one application every 24 hours.");
-        setLoading(false);
-        return;
-      }
+    // try {
+    //   const recentlySubmitted = await checkIfSubmittedRecently();
 
-      await addDoc(collection(db, "users"), {
-        fullName: fullName,
-        email: email,
-        phoneNumber: phoneNumber,
-        areasOfInterest: areasOfInterest,
-        skills: skilles,
-        WhyUS: WhyUS,
-        Faculty: faculty,
-        timestamp: Timestamp.now(), // Store the current time of submission
-      });
+    //   if (recentlySubmitted) {
+    //     setError("You can only submit one application every 24 hours.");
+    //     setLoading(false);
+    //     return;
+    //   }
 
-      setLoading(false);
-      setMessage("Welcome to Our Crew!");
+    //   await addDoc(collection(db, "users"), {
+    //     fullName: fullName,
+    //     email: email,
+    //     phoneNumber: phoneNumber,
+    //     areasOfInterest: areasOfInterest,
+    //     skills: skilles,
+    //     WhyUS: WhyUS,
+    //     Faculty: faculty,
+    //     timestamp: Timestamp.now(), // Store the current time of submission
+    //   });
 
-      setTimeout(() => {
-        setMessage(false);
-      }, 4000);
-    } catch (error) {
-      setError(error.message);
-      setTimeout(() => {
-        setError(false);
-      }, 4000);
-    }
+    //   setLoading(false);
+    //   setMessage("Welcome to Our Crew!");
+
+    //   setTimeout(() => {
+    //     setMessage(false);
+    //   }, 4000);
+    // } catch (error) {
+    //   setError(error.message);
+    //   setTimeout(() => {
+    //     setError(false);
+    //   }, 4000);
+    // }
   };
 
   return (
@@ -145,7 +152,15 @@ const JoinForm = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl p-[40px] mx-auto backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="max-w-5xl relative p-[40px] mx-auto backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300">
+          {/* close the registrations*/}
+          {closeRegistrations && (
+            <div className="absolute w-full h-full flex items-center justify-center left-0 top-0 bg-[#f1f1f1ad]">
+              <div className="p-[20px] w-[80%] text-center font-bold text-[red] text-md sm:text-lg md:text-xl lg:text-2xl xl:text-4xl rotate-[-25deg] bg-[white] border-[4px] rounded-lg border-[red]">
+                Registrations are closed.
+              </div>
+            </div>
+          )}
           <form className="flex flex-col gap-[15px]" onSubmit={handleSubmit}>
             {/* Form content remains the same */}
             <div className=" flex flex-col sm:flex-row gap-[60px] h-full">
