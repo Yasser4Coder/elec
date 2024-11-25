@@ -5,19 +5,29 @@ import { SiCyberdefenders } from "react-icons/si";
 import { FaCode } from "react-icons/fa";
 import { FiPenTool } from "react-icons/fi";
 import { ImBooks } from "react-icons/im";
-
+import { motion } from "framer-motion";
 const About = () => {
   return (
     <section
       id="about"
       className="min-h-screen z-40 relative overflow-hidden flex items-center justify-center"
     >
-      <div className=" container mx-auto flex items-center justify-center">
+      <motion.div
+        className=" container mx-auto flex items-center justify-center"
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      >
         <div className="flex gap-[20px] items-center flex-col">
           <h2 className="text-4xl font-dtFont mt-[40px] font-extrabold tracking-tighter sm:text-5xl md:text-6xl text-[#18aeed] mb-4">
             ABOUT ELEC CLUB
           </h2>
-          <div className="grid font-popinFont grid-cols-1 mb-[80px] md:grid-cols-3 gap-8">
+          <motion.div
+            className="grid font-popinFont grid-cols-1 mb-[80px] md:grid-cols-3 gap-8"
+            initial={{ opacity: 0, x: 500 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
             <div className="about-card p-[30px] border-[1px] transition-all duration-300 transform hover:scale-105 rounded-lg border-[#18aeed]">
               <div className="mb-[15px]">
                 <h1 className="flex items-center text-xl text-[#18aeed]">
@@ -91,9 +101,9 @@ const About = () => {
                 resources, and a collaborative space.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

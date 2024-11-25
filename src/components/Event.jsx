@@ -43,6 +43,7 @@ import { CalendarIcon } from "lucide-react";
 
 import amroun from "../images/nextEvent/od3.png";
 import EventCard from "./EventCard";
+import { motion } from "framer-motion";
 
 const coImages = [co1, co2, co3, co4, co5, co6];
 const poImages = [p1, p2, p3, p4, p5];
@@ -72,6 +73,7 @@ const Event = () => {
       const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
 
       const s = Math.floor((difference % (1000 * 60)) / 1000);
+
       if (difference <= 0) {
         setDays(0);
         setHours(0);
@@ -122,8 +124,18 @@ const Event = () => {
       </div>
 
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="flex flex-col items-center justify-between space-y-12">
-          <div className="space-y-4 text-center lg:text-left">
+        <motion.div
+          className="flex flex-col items-center justify-between space-y-12"
+          initial={{ opacity: 0, x: 300 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.div
+            className="space-y-4 text-center lg:text-left"
+            initial={{ opacity: 0, x: -800 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
             <h1 className="text-5xl font-dtFont text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text text-white">
               Next Elec Event
             </h1>
@@ -146,7 +158,7 @@ const Event = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           <div className=" container mx-auto">
             <div className="w-full perspective-1000">
@@ -258,7 +270,7 @@ const Event = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Animated electric sparks */}
         {[...Array(5)].map((_, i) => (
