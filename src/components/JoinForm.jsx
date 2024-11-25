@@ -306,7 +306,10 @@ const JoinForm = () => {
               />
             </div>
 
-            <button className="bg-blue font-dtFont font-semibold flex items-center justify-center gap-[10px] text-center py-[13px] rounded-lg text-white">
+            <button
+              disabled
+              className="bg-blue font-dtFont font-semibold flex items-center justify-center gap-[10px] text-center py-[13px] rounded-lg text-white"
+            >
               SEND REGISTRATION
             </button>
 
