@@ -130,12 +130,7 @@ const Event = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <motion.div
-            className="space-y-4 text-center lg:text-left"
-            initial={{ opacity: 0, x: -800 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-          >
+          <div className="space-y-4 text-center lg:text-left">
             <h1 className="text-5xl font-dtFont text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text text-white">
               Next Elec Event
             </h1>
@@ -158,7 +153,7 @@ const Event = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           <div className=" container mx-auto">
             <div className="w-full perspective-1000">
