@@ -43,6 +43,7 @@ import { CalendarIcon } from "lucide-react";
 
 import amroun from "../images/nextEvent/od3.png";
 import EventCard from "./EventCard";
+import { motion } from "framer-motion";
 
 const coImages = [co1, co2, co3, co4, co5, co6];
 const poImages = [p1, p2, p3, p4, p5];
@@ -57,25 +58,33 @@ const Event = () => {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const target = new Date("2024-11-13T10:00:00");
+    const target = new Date("2024-11-12T10:00:00");
 
     const interval = setInterval(() => {
       const now = new Date();
       const difference = target.getTime() - now.getTime();
 
       const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-      setDays(d);
 
       const h = Math.floor(
         (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
-      setHours(h);
 
       const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      setMinutes(m);
 
       const s = Math.floor((difference % (1000 * 60)) / 1000);
-      setSeconds(s);
+
+      if (difference <= 0) {
+        setDays(0);
+        setHours(0);
+        setMinutes(0);
+        setSeconds(0);
+      } else {
+        setHours(h);
+        setMinutes(m);
+        setSeconds(s);
+        setDays(d);
+      }
     }, 1000);
 
     return () => clearInterval(interval);
@@ -115,7 +124,12 @@ const Event = () => {
       </div>
 
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="flex flex-col items-center justify-between space-y-12">
+        <motion.div
+          className="flex flex-col items-center justify-between space-y-12"
+          initial={{ opacity: 0, x: 300 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <div className="space-y-4 text-center lg:text-left">
             <h1 className="text-5xl font-dtFont text-center sm:text-6xl font-bold mb-6 text-transparent bg-clip-text text-white">
               Next Elec Event
@@ -251,7 +265,7 @@ const Event = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Animated electric sparks */}
         {[...Array(5)].map((_, i) => (

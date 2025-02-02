@@ -11,6 +11,7 @@ import img8 from "../images/elecTeam/Card-12.png";
 import img9 from "../images/elecTeam/Card-8.png";
 import img10 from "../images/elecTeam/Card-9.png";
 import img12 from "../images/elecTeam/Card-11.png";
+import { motion } from "framer-motion";
 const OurTeam = () => {
   return (
     <section
@@ -45,11 +46,21 @@ const OurTeam = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <motion.div
+        className="container mx-auto px-4 md:px-6 relative z-10"
+        initial={{ opacity: 0, x: 300 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      >
         <h1 className="text-5xl font-dtFont text-center sm:text-6xl font-bold mb-12 text-transparent bg-clip-text text-white">
           OUR CORE TEAM
         </h1>
-        <div className=" container flex justify-center flex-wrap gap-3 mx-auto">
+        <motion.div
+          className=" container flex justify-center flex-wrap gap-3 mx-auto"
+          initial={{ opacity: 0, x: -400 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <div>
             <img src={img4} alt="" width={310} />
           </div>
@@ -87,8 +98,8 @@ const OurTeam = () => {
           <div>
             <img src={img12} alt="" width={310} />
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Floating icons */}
       {[...Array(8)].map((_, i) => (

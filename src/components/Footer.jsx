@@ -6,11 +6,16 @@ import {
   LinkedinIcon,
   MailIcon,
 } from "lucide-react";
-
+import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <footer className="w-full overflow-hidden bg-[#F3F4F6] border-t border-[#E5E7EB]">
-      <div className="container mx-auto px-4 py-8 md:py-12">
+      <motion.div
+        className="container mx-auto px-4 py-8 md:py-12"
+        initial={{ opacity: 0, y: 300 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-[#2563EB]">Elec Club</h3>
@@ -116,7 +121,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Elec Club. All rights reserved.
           </p>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };
