@@ -62,49 +62,49 @@ const JoinForm = () => {
     setError("");
     setMessage("");
 
-    // close reg
-    setLoading(false);
-    setError("We are sorry the registrations are closed");
-    // here all
+    // // close reg
+    // setLoading(false);
+    // setError("We are sorry the registrations are closed");
+    // // here all
 
-    // if (areasOfInterest.length < 1) {
-    //   setError("Please select one area of interest.");
-    //   setLoading(false);
-    //   return;
-    // }
+    if (areasOfInterest.length < 1) {
+      setError("Please select one area of interest.");
+      setLoading(false);
+      return;
+    }
 
-    // try {
-    //   const recentlySubmitted = await checkIfSubmittedRecently();
+    try {
+      const recentlySubmitted = await checkIfSubmittedRecently();
 
-    //   if (recentlySubmitted) {
-    //     setError("You can only submit one application every 24 hours.");
-    //     setLoading(false);
-    //     return;
-    //   }
+      if (recentlySubmitted) {
+        setError("You can only submit one application.");
+        setLoading(false);
+        return;
+      }
 
-    //   await addDoc(collection(db, "users"), {
-    //     fullName: fullName,
-    //     email: email,
-    //     phoneNumber: phoneNumber,
-    //     areasOfInterest: areasOfInterest,
-    //     skills: skilles,
-    //     WhyUS: WhyUS,
-    //     Faculty: faculty,
-    //     timestamp: Timestamp.now(), // Store the current time of submission
-    //   });
+      await addDoc(collection(db, "users"), {
+        fullName: fullName,
+        email: email,
+        phoneNumber: phoneNumber,
+        areasOfInterest: areasOfInterest,
+        skills: skilles,
+        WhyUS: WhyUS,
+        Faculty: faculty,
+        timestamp: Timestamp.now(), // Store the current time of submission
+      });
 
-    //   setLoading(false);
-    //   setMessage("Welcome to Our Crew!");
+      setLoading(false);
+      setMessage("Welcome to Our Crew!");
 
-    //   setTimeout(() => {
-    //     setMessage(false);
-    //   }, 4000);
-    // } catch (error) {
-    //   setError(error.message);
-    //   setTimeout(() => {
-    //     setError(false);
-    //   }, 4000);
-    // }
+      setTimeout(() => {
+        setMessage(false);
+      }, 4000);
+    } catch (error) {
+      setError(error.message);
+      setTimeout(() => {
+        setError(false);
+      }, 4000);
+    }
   };
 
   return (
@@ -153,7 +153,7 @@ const JoinForm = () => {
         </div>
 
         <div className="max-w-5xl relative p-[40px] mx-auto backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300">
-          {/* close the registrations*/}
+          close the registrations
           {closeRegistrations && (
             <div className="absolute w-full h-full flex items-center justify-center left-0 top-0 bg-[#f1f1f1ad]">
               <div className="p-[20px] w-[80%] text-center font-bold text-[red] text-md sm:text-lg md:text-xl lg:text-2xl xl:text-4xl rotate-[-25deg] bg-[white] border-[4px] rounded-lg border-[red]">
