@@ -1,11 +1,8 @@
 import { ZapIcon, BoltIcon } from "lucide-react";
 import img1 from "../images/elecTeam/Card-1.png";
 import img2 from "../images/elecTeam/Card-2.png";
-import img3 from "../images/elecTeam/Card-3.png";
 import img4 from "../images/elecTeam/Card.png";
 import img5 from "../images/elecTeam/Card-4.png";
-import img6 from "../images/elecTeam/Card-5.png";
-import img7 from "../images/elecTeam/Card-6.png";
 import img13 from "../images/elecTeam/Card-7.png";
 import img8 from "../images/elecTeam/Card-12.png";
 import img9 from "../images/elecTeam/Card-8.png";
@@ -71,16 +68,7 @@ const OurTeam = () => {
             <img src={img2} alt="" width={310} />
           </div>
           <div>
-            <img src={img3} alt="" width={310} />
-          </div>
-          <div>
             <img src={img5} alt="" width={310} />
-          </div>
-          <div>
-            <img src={img6} alt="" width={310} />
-          </div>
-          <div>
-            <img src={img7} alt="" width={310} />
           </div>
           <div>
             <img src={img9} alt="" width={310} />
