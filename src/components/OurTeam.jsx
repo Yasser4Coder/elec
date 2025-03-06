@@ -3,7 +3,6 @@ import img1 from "../images/elecTeam/Card-1.png";
 import img2 from "../images/elecTeam/Card-2.png";
 import img4 from "../images/elecTeam/Card.png";
 import img5 from "../images/elecTeam/Card-4.png";
-import img13 from "../images/elecTeam/Card-7.png";
 import img8 from "../images/elecTeam/Card-12.png";
 import img9 from "../images/elecTeam/Card-8.png";
 import img10 from "../images/elecTeam/Card-9.png";
@@ -72,9 +71,6 @@ const OurTeam = () => {
           </div>
           <div>
             <img src={img9} alt="" width={310} />
-          </div>
-          <div>
-            <img src={img13} alt="" width={310} />
           </div>
           <div>
             <img src={img10} alt="" width={310} />
