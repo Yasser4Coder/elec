@@ -1,7 +1,6 @@
 import React from "react";
 import {
   FacebookIcon,
-  TwitterIcon,
   InstagramIcon,
   LinkedinIcon,
   MailIcon,
@@ -30,44 +29,44 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <h1
-                  href="#"
+                <a
+                  href="#home"
                   className="text-sm text-[#4B5563] hover:text-[#2563EB] transition-colors"
                 >
                   Home
-                </h1>
+                </a>
               </li>
               <li>
-                <h1
-                  href="#"
+                <a
+                  href="#about"
                   className="text-sm text-[#4B5563] hover:text-[#2563EB] transition-colors"
                 >
                   About Us
-                </h1>
+                </a>
               </li>
               <li>
-                <h1
-                  href="#"
+                <a
+                  href="#event"
                   className="text-sm text-[#4B5563] hover:text-[#2563EB] transition-colors"
                 >
                   Events
-                </h1>
+                </a>
               </li>
-              <li>
-                <h1
-                  href="#"
+              {/*<li>
+                <a
+                  href="#activities"
                   className="text-sm text-[#4B5563] hover:text-[#2563EB] transition-colors"
                 >
                   Activities
-                </h1>
-              </li>
+                </a>
+              </li>*/}
               <li>
-                <h1
-                  href="#"
+                <a
+                  href="#members"
                   className="text-sm text-[#4B5563] hover:text-[#2563EB] transition-colors"
                 >
                   Members
-                </h1>
+                </a>
               </li>
             </ul>
           </div>
@@ -76,34 +75,45 @@ const Footer = () => {
               Connect With Us
             </h3>
             <div className="flex space-x-4">
-              <h1
-                href="#"
-                className="text-[#4B5563] hover:text-[#2563EB] transition-colors"
+              <a
+                href="https://www.facebook.com/@elec.msila28"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FacebookIcon className="w-5 h-5" />
-                <span className="sr-only">Facebook</span>
-              </h1>
-              <h1
-                href="#"
-                className="text-[#4B5563] hover:text-[#2563EB] transition-colors"
+                <h1
+                  href="#"
+                  className="text-[#4B5563] hover:text-[#2563EB] transition-colors"
+                >
+                  <FacebookIcon className="w-5 h-5" />
+                  <span className="sr-only">Facebook</span>
+                </h1>
+              </a>
+              <a
+                href="https://www.instagram.com/elec_club/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <TwitterIcon className="w-5 h-5" />
-                <span className="sr-only">Twitter</span>
-              </h1>
-              <h1
-                href="#"
-                className="text-[#4B5563] hover:text-[#2563EB] transition-colors"
+                <h1
+                  href="#"
+                  className="text-[#4B5563] hover:text-[#2563EB] transition-colors"
+                >
+                  <InstagramIcon className="w-5 h-5" />
+                  <span className="sr-only">Instagram</span>
+                </h1>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/elec-club/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <InstagramIcon className="w-5 h-5" />
-                <span className="sr-only">Instagram</span>
-              </h1>
-              <h1
-                href="#"
-                className="text-[#4B5563] hover:text-[#2563EB] transition-colors"
-              >
-                <LinkedinIcon className="w-5 h-5" />
-                <span className="sr-only">LinkedIn</span>
-              </h1>
+                <h1
+                  href="#"
+                  className="text-[#4B5563] hover:text-[#2563EB] transition-colors"
+                >
+                  <LinkedinIcon className="w-5 h-5" />
+                  <span className="sr-only">LinkedIn</span>
+                </h1>
+              </a>
             </div>
             <div className="flex items-center space-x-2">
               <MailIcon className="w-5 h-5 text-[#4B5563]" />
