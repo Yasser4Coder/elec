@@ -4,12 +4,13 @@ import BgAnimation from "./BgAnimation";
 import logo from "../images/elecBlueLogo.png";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import icon from "../images/app/icon.png";
 
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className=" bg-[#111827] font-popinFont relative h-[100vh] overflow-hidden flex items-center justify-center"
+      className=" bg-[#111827] font-popinFont relative min-h-[100vh] pt-[20px] overflow-hidden flex items-center justify-center"
     >
       <div className=" hidden lg:block absolute right-0 top-[20%]">
         <svg
@@ -90,6 +91,19 @@ const HeroSection = () => {
               className=" py-[10px] cursor-pointer px-[30px] flex items-center gap-[5px] rounded-xl bg-transparent border-[#18aeed] text-[#18aeed] border-[2px] font-semibold hover:bg-[#18aeed] hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               Join Now <ChevronRight className="ml-2 h-4 w-4" />
+            </Link>
+            <img
+              src={icon}
+              alt=""
+              className="max-w-[20%] md:max-w-[140px] rounded-2xl"
+            />
+            <Link
+              to="apps"
+              rel="noopener noreferrer"
+              className=" py-[10px] mb-[60px] text-sm sm:text-2xl cursor-pointer px-[13px] flex items-center gap-[5px] rounded-xl bg-transparent border-[#18aeed] text-[#18aeed] border-[2px] font-semibold hover:bg-[#18aeed] hover:text-white transition-all duration-300 transform hover:scale-105"
+            >
+              تحميل التطبيق
+              <ChevronRight className="ml-2 h-6 w-6" />
             </Link>
           </motion.div>
         </div>

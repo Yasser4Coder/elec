@@ -56,6 +56,12 @@ const Header = () => {
             >
               Members
             </Link>
+            <Link
+              to="apps"
+              className="text-white text-md linkes-hover font-semibold cursor-pointer hover:text-blue-400 transition-colors"
+            >
+              Our App
+            </Link>
           </div>
           <div className="hidden md:flex items-center gap-[20px]">
             <Link
@@ -118,6 +124,13 @@ const Header = () => {
             className="text-lg font-semibold cursor-pointer hover:text-gray transition-colors"
           >
             Members
+          </Link>
+          <Link
+            onClick={toggleMenu}
+            to="apps"
+            className="text-lg font-semibold cursor-pointer hover:text-gray transition-colors"
+          >
+            Our App
           </Link>
           <Link
             onClick={toggleMenu}
