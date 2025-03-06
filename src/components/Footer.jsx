@@ -118,10 +118,10 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <MailIcon className="w-5 h-5 text-[#4B5563]" />
               <a
-                href="mailto:contact@electricclub.edu"
+                href="mailto:elec.club28@gmail.com"
                 className="text-sm text-[#4B5563] hover:text-[#2563EB] transition-colors"
               >
-                contact@electricclub.edu
+                elec.club28@gmail.com
               </a>
             </div>
           </div>
