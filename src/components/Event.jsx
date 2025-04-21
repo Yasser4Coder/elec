@@ -41,7 +41,7 @@ import w5 from "../images/workshops/5.jpg";
 
 import { CalendarIcon } from "lucide-react";
 
-import amroun from "../images/nextEvent/od3.png";
+import amroun from "../images/p0.jpg";
 import EventCard from "./EventCard";
 import { motion } from "framer-motion";
 
@@ -58,7 +58,7 @@ const Event = () => {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const target = new Date("2024-11-12T10:00:00");
+    const target = new Date("2025-04-24T10:00:00");
 
     const interval = setInterval(() => {
       const now = new Date();
@@ -170,37 +170,37 @@ const Event = () => {
 
                   <div className="space-y-2 flex flex-col gap-[18px] xl:gap-[32px]">
                     <p className="text-[#F1F5F9] text-2xl xl:text-3xl font-semibold">
-                      The Open Day
+                      Project-0
                     </p>
                     <div className=" flex flex-col gap-[8px]">
                       <p className="text-[#CBD5E1] overflow-y-auto event-card-p text-sm xl:text-lg sm:h-[150px] lg:h-[202px] xl:h-[240px] 2xl:h-[200px]">
-                        Elec Open Day 2024 An exciting event that offers a rich
-                        experience in technology, innovation, and creativity. We
-                        work on a variety of fields, including AI, design,
-                        coding, and more. With interactive activities,
-                        innovative project displays, and plenty of networking
-                        opportunities, this event is designed for those
-                        passionate about learning, growth, and exploring the
-                        endless possibilities within the tech world. Join us to
-                        connect with a crew eager to collaborate and discover
-                        new opportunities.
+                        Ready for the challenge? Project-0 is your chance to
+                        test your skills in AI, graphic design, cybersecurity,
+                        and Problem Solving, Join us at Project0 from April 24th
+                        to 26th at the Technology Faculty Library and be part of
+                        the most exciting event!
                       </p>
                       <div className="flex flex-col gap-[4px]">
                         <div className="flex items-center text-[#94B8A3] text-lg xl:text-xl">
                           <CalendarIcon className="w-4 h-4 mr-1" />
                           <span>
-                            Saturday, November 15, 2023 | 2:00 PM - 5:00 PM
+                            Thursday, Friday, Saturday | 24, 25, 26 April | 2025
                           </span>
                         </div>
                         <p className="text-[#CBD5E1] text-md xl:text-lg">
-                          <strong>Location:</strong> Engineering Building, Room
-                          301
+                          <strong>Location:</strong> Faculty of Technology
+                          sciences | Library - ST | M'sila
                         </p>
                       </div>
                     </div>
-                    <button className="w-full py-[15px] rounded-lg bg-[#1E88E5] hover:bg-[#1976D2] text-white transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg">
+                    <a
+                      href="https://p0-registeration.onrender.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full flex items-center justify-center py-[15px] rounded-lg bg-[#1E88E5] hover:bg-[#1976D2] text-white transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg"
+                    >
                       Register Now
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
