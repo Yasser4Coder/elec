@@ -92,19 +92,19 @@ const HeroSection = () => {
             >
               Join Now <ChevronRight className="ml-2 h-4 w-4" />
             </Link>
-            <img
+            {/* <img
               src={icon}
               alt=""
               className="max-w-[20%] md:max-w-[140px] rounded-2xl"
-            />
-            <Link
+            /> */}
+            {/* <Link
               to="apps"
               rel="noopener noreferrer"
               className=" py-[10px] mb-[60px] text-sm sm:text-2xl cursor-pointer px-[13px] flex items-center gap-[5px] rounded-xl bg-transparent border-[#18aeed] text-[#18aeed] border-[2px] font-semibold hover:bg-[#18aeed] hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               تحميل التطبيق
               <ChevronRight className="ml-2 h-6 w-6" />
-            </Link>
+            </Link> */}
           </motion.div>
         </div>
       </div>

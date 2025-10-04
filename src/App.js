@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <HeroSection />
-      <AppSection />
+      {/* <AppSection /> */}
 
       <div className=" relative">
         <About />

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import project0 from "../images/PROJECT-0.png";
+import comingSoon from "../images/p0.jpg"
+import project02 from "../images/p0-v2/logo p0.png"
 import co from "../images/CO.png";
 import startUpCity from "../images/startup0.png";
 import des from "../images/des.png";
@@ -18,6 +20,10 @@ import p2 from "../images/p0/01.png";
 import p3 from "../images/p0/02.png";
 import p4 from "../images/p0/07.png";
 import p5 from "../images/p0/10.png";
+
+import p01 from "../images/p0-v2/photo_2025-10-05_00-05-06.jpg";
+import p02 from "../images/p0-v2/photo_2025-10-05_00-05-27.jpg";
+import p03 from "../images/p0-v2/photo_2025-10-05_00-05-33.jpg";
 
 import s1 from "../images/startupcity/1.jpg";
 import s2 from "../images/startupcity/2.jpg";
@@ -47,6 +53,7 @@ import { motion } from "framer-motion";
 
 const coImages = [co1, co2, co3, co4, co5, co6];
 const poImages = [p1, p2, p3, p4, p5];
+const poImages2 = [p01, p02, p03];
 const startUpImages = [s1, s2, s3, s4, s5];
 const designersDay = [d1, d2, d3, d4, d5, d6];
 const workshops = [w1, w3, w4, w2, w5];
@@ -162,34 +169,29 @@ const Event = () => {
                 <div className="relative px-7 py-6 bg-[#1F2937] ring-1 ring-[#0F172A] rounded-lg leading-none flex items-center flex-col lg:flex-row gap-[60px] xl:gap-[90px] items-top justify-start space-x-6 transform transition duration-500 hover:scale-105 hover:rotate-1">
                   <div className="event-card-event min-w-[360px] min-h-[360px] overflow-hidden max-w-[360px] max-h-[360px] xl:min-w-[420px] xl:max-w-[420px] xl:min-h-[420px] xl:max-h-[420px] border-blue rounded-xl border-[2px]">
                     <img
-                      src={amroun}
+                      src={comingSoon}
                       className="w-full h-full object-cover rounded-xl"
-                      alt=""
+                      alt="Coming soon.."
                     />
                   </div>
 
                   <div className="space-y-2 flex flex-col gap-[18px] xl:gap-[32px]">
                     <p className="text-[#F1F5F9] text-2xl xl:text-3xl font-semibold">
-                      Project-0
+                      Coming soon
                     </p>
                     <div className=" flex flex-col gap-[8px]">
                       <p className="text-[#CBD5E1] overflow-y-auto event-card-p text-sm xl:text-lg sm:h-[150px] lg:h-[202px] xl:h-[240px] 2xl:h-[200px]">
-                        Ready for the challenge? Project-0 is your chance to
-                        test your skills in AI, graphic design, cybersecurity,
-                        and Problem Solving, Join us at Project0 from April 24th
-                        to 26th at the Technology Faculty Library and be part of
-                        the most exciting event!
+                        Coming soon...
                       </p>
                       <div className="flex flex-col gap-[4px]">
                         <div className="flex items-center text-[#94B8A3] text-lg xl:text-xl">
                           <CalendarIcon className="w-4 h-4 mr-1" />
                           <span>
-                            Thursday, Friday, Saturday | 24, 25, 26 April | 2025
+                            Coming soon...
                           </span>
                         </div>
                         <p className="text-[#CBD5E1] text-md xl:text-lg">
-                          <strong>Location:</strong> Faculty of Technology
-                          sciences | Library - ST | M'sila
+                          Coming soon...
                         </p>
                       </div>
                     </div>
@@ -214,6 +216,16 @@ const Event = () => {
               </h1>
             </div>
             <div className="flex mt-[80px] flex-col gap-[120px]">
+            <EventCard
+                title={"Project-0 2nd edition"}
+                location={"MBU - M'sila"}
+                desc={
+                  "The ultimate test of skills and teamwork. Project 0 challenged participants with AI, design, and cybersecurity tasks that grew in complexity in every  wave ,pushing teams to innovate and collaborate under pressure. An intense yet rewarding experience crafted for those ready to step up their game."
+                }
+                date={"April, 24, 2025"}
+                image={project02}
+                images={poImages2}
+              />
               <EventCard
                 title={"Project-0"}
                 location={"MBU - M'sila"}
