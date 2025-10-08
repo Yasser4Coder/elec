@@ -1,12 +1,17 @@
 import { ZapIcon, BoltIcon } from "lucide-react";
+import img from "../images/elecTeam/Card.png";
 import img1 from "../images/elecTeam/Card-1.png";
 import img2 from "../images/elecTeam/Card-2.png";
-import img4 from "../images/elecTeam/Card.png";
-import img5 from "../images/elecTeam/Card-4.png";
-import img8 from "../images/elecTeam/Card-12.png";
-import img9 from "../images/elecTeam/Card-8.png";
-import img10 from "../images/elecTeam/Card-9.png";
-import img12 from "../images/elecTeam/Card-11.png";
+import img3 from "../images/elecTeam/Card-3.png";
+import img4 from "../images/elecTeam/Card-4.png";
+import img5 from "../images/elecTeam/Card-5.png";
+import img6 from "../images/elecTeam/Card-6.png";
+import img7 from "../images/elecTeam/Card-7.png";
+import img8 from "../images/elecTeam/Card-8.png";
+import img9 from "../images/elecTeam/Card-9.png";
+import img10 from "../images/elecTeam/Card-10.png";
+import img11 from "../images/elecTeam/Card-11.png";
+
 import { motion } from "framer-motion";
 const OurTeam = () => {
   return (
@@ -58,7 +63,10 @@ const OurTeam = () => {
           transition={{ duration: 1 }}
         >
           <div>
-            <img src={img4} alt="" width={310} />
+            <img src={img10} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img} alt="" width={310} />
           </div>
           <div>
             <img src={img1} alt="" width={310} />
@@ -67,20 +75,29 @@ const OurTeam = () => {
             <img src={img2} alt="" width={310} />
           </div>
           <div>
+            <img src={img3} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img4} alt="" width={310} />
+          </div>
+          <div>
             <img src={img5} alt="" width={310} />
+          </div>
+
+          <div>
+            <img src={img6} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img7} alt="" width={310} />
+          </div>
+          <div>
+            <img src={img8} alt="" width={310} />
           </div>
           <div>
             <img src={img9} alt="" width={310} />
           </div>
           <div>
-            <img src={img10} alt="" width={310} />
-          </div>
-
-          <div>
-            <img src={img8} alt="" width={310} />
-          </div>
-          <div>
-            <img src={img12} alt="" width={310} />
+            <img src={img11} alt="" width={310} />
           </div>
         </motion.div>
       </motion.div>
