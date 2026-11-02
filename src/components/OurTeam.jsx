@@ -66,9 +66,6 @@ const OurTeam = () => {
             <img src={img10} alt="" width={310} />
           </div>
           <div>
-            <img src={img} alt="" width={310} />
-          </div>
-          <div>
             <img src={img1} alt="" width={310} />
           </div>
           <div>
@@ -83,11 +80,14 @@ const OurTeam = () => {
           <div>
             <img src={img5} alt="" width={310} />
           </div>
-
           <div>
             <img src={img6} alt="" width={310} />
           </div>
+
           <div>
+            <img src={img7} alt="" width={310} />
+          </div>
+          {/* <div>
             <img src={img7} alt="" width={310} />
           </div>
           <div>
@@ -95,7 +95,7 @@ const OurTeam = () => {
           </div>
           <div>
             <img src={img9} alt="" width={310} />
-          </div>
+          </div> */}
           <div>
             <img src={img11} alt="" width={310} />
           </div>

@@ -10,7 +10,7 @@ import {
   Timestamp,
 } from "firebase/firestore";
 
-const closeRegistrations = true;
+const closeRegistrations = false;
 
 const JoinForm = () => {
   const [fullName, setFullName] = useState("");
@@ -306,7 +306,7 @@ const JoinForm = () => {
               />
             </div>
             {/* button is disabled*/}
-            disabled
+            enabled
             <button
               className="bg-blue font-dtFont font-semibold flex items-center justify-center gap-[10px] text-center py-[13px] rounded-lg text-white"
             >
