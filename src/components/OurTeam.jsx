@@ -1,14 +1,14 @@
 import { ZapIcon, BoltIcon } from "lucide-react";
 import img from "../images/elecTeam/Card.png";
-import img1 from "../images/elecTeam/Card-1.png";
-import img2 from "../images/elecTeam/Card-2.png";
-import img3 from "../images/elecTeam/Card-3.png";
-import img4 from "../images/elecTeam/Card-4.png";
-import img5 from "../images/elecTeam/Card-5.png";
-import img6 from "../images/elecTeam/Card-6.png";
-import img7 from "../images/elecTeam/Card-7.png";
-import img8 from "../images/elecTeam/Card-8.png";
-import img9 from "../images/elecTeam/Card-9.png";
+import img1 from "../images/elecTeam/1.png";
+import img2 from "../images/elecTeam/2.png";
+import img3 from "../images/elecTeam/3.png";
+import img4 from "../images/elecTeam/5.png";
+import img5 from "../images/elecTeam/4.png";
+import img6 from "../images/elecTeam/6.png";
+import img7 from "../images/elecTeam/7.png";
+// import img8 from "../images/elecTeam/Card-8.png";
+// import img9 from "../images/elecTeam/Card-9.png";
 import img10 from "../images/elecTeam/Card-10.png";
 import img11 from "../images/elecTeam/Card-11.png";
 
