@@ -40,7 +40,7 @@ const JoinForm = () => {
   };
 
   const checkIfSubmittedRecently = async () => {
-    const q = query(collection(db, "users"), where("email", "==", email));
+    const q = query(collection(db, "users1"), where("email", "==", email));
     const querySnapshot = await getDocs(q);
 
     if (!querySnapshot.empty) {
@@ -82,7 +82,7 @@ const JoinForm = () => {
         return;
       }
 
-      await addDoc(collection(db, "users"), {
+      await addDoc(collection(db, "users1"), {
         fullName: fullName,
         email: email,
         phoneNumber: phoneNumber,
